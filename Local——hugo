@@ -1,0 +1,61 @@
+git clone https://github.com/yangjyi150395-jpg/uk-brazil-project-NU.git
+cd uk-brazil-project-NU
+
+
+hugo new site . --force
+
+baseURL = "https://yangjyi150395-jpg.github.io/uk-brazil-project-NU/"
+languageCode = "zh-cn"
+title = "UK–Brazil Project"
+
+hugo server -D
+
+name: Deploy Hugo site to GitHub Pages
+
+on:
+  push:
+    branches: ["main"]
+
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+concurrency:
+  group: "pages"
+  cancel-in-progress: false
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup Hugo
+        uses: peaceiris/actions-hugo@v3
+        with:
+          hugo-version: "0.125.7"
+          extended: true
+
+      - name: Build
+        run: hugo --minify
+
+      - name: Upload artifact
+        uses: actions/upload-pages-artifact@v3
+        with:
+          path: ./public
+
+  deploy:
+    runs-on: ubuntu-latest
+    needs: build
+    environment:
+      name: github-pages
+    steps:
+      - name: Deploy
+        uses: actions/deploy-pages@v4
+
+git add .
+git commit -m "Init Hugo site"
+git branch -M main
+git push -u origin main
