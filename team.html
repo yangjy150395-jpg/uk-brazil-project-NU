@@ -3,9 +3,140 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Project Overview</title>
+  <title>Team Members | UK–Brazil Project (NU)</title>
   <link rel="stylesheet" href="style.css" />
+
+  <!-- Page-specific layout (safe to keep here so you do not need to touch style.css) -->
+  <style>
+    .page-head{
+      margin: 16px 0 10px;
+    }
+    .page-head h1{
+      margin: 0 0 8px;
+      font-size: 30px;
+      letter-spacing: -0.2px;
+    }
+    .page-head p{
+      margin: 0;
+      color: var(--muted);
+      line-height: 1.5;
+    }
+
+    .team-wrap{
+      margin-top: 16px;
+      display: flex;
+      flex-direction: column;
+      gap: 14px;
+    }
+
+    .member-card{
+      border: 1px solid var(--line);
+      border-radius: 18px;
+      background: #fff;
+      box-shadow: var(--shadow);
+      padding: 16px;
+    }
+
+    .member-grid{
+      display: grid;
+      grid-template-columns: 1.35fr 0.65fr; /* text left, image right */
+      gap: 16px;
+      align-items: start;
+    }
+
+    .member-name{
+      margin: 0 0 6px;
+      font-size: 20px;
+      font-weight: 850;
+    }
+
+    .member-meta{
+      margin: 0 0 10px;
+      color: var(--muted);
+      font-weight: 650;
+    }
+
+    .member-text{
+      margin: 0;
+      line-height: 1.6;
+      color: #0f172a;
+    }
+
+    .member-tags{
+      margin-top: 12px;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+    }
+
+    .tag{
+      display: inline-block;
+      border: 1px solid var(--line);
+      padding: 6px 10px;
+      border-radius: 999px;
+      font-size: 12px;
+      color: var(--muted);
+      background: #fff;
+      font-weight: 650;
+    }
+
+    /* Photo placeholder: uses background-image, so missing images do not show broken icons */
+    .photo{
+      width: 100%;
+      min-height: 200px;
+      border-radius: 16px;
+      border: 1px solid var(--line);
+      overflow: hidden;
+      background:
+        linear-gradient(120deg, rgba(37,99,235,0.14), rgba(16,185,129,0.10), rgba(245,158,11,0.10));
+      position: relative;
+    }
+
+    .photo::after{
+      content: "Image placeholder (upload later)";
+      position: absolute;
+      left: 12px;
+      bottom: 10px;
+      font-size: 12px;
+      color: rgba(15,23,42,0.55);
+      background: rgba(255,255,255,0.75);
+      padding: 6px 10px;
+      border-radius: 999px;
+      border: 1px solid rgba(226,232,240,0.9);
+      backdrop-filter: blur(6px);
+    }
+
+    /* When you upload images to these paths, they will appear automatically */
+    .photo.qiuji{ background-image:
+      linear-gradient(180deg, rgba(2,6,23,0.00) 0%, rgba(2,6,23,0.08) 100%),
+      url("images/team/qiuji.jpg");
+      background-size: cover;
+      background-position: center;
+    }
+    .photo.cesar{ background-image:
+      linear-gradient(180deg, rgba(2,6,23,0.00) 0%, rgba(2,6,23,0.08) 100%),
+      url("images/team/cesar.jpg");
+      background-size: cover;
+      background-position: center;
+    }
+    .photo.jingyuan{ background-image:
+      linear-gradient(180deg, rgba(2,6,23,0.00) 0%, rgba(2,6,23,0.08) 100%),
+      url("images/team/jingyuan.jpg");
+      background-size: cover;
+      background-position: center;
+    }
+
+    @media (max-width: 900px){
+      .member-grid{
+        grid-template-columns: 1fr;
+      }
+      .photo{
+        min-height: 220px;
+      }
+    }
+  </style>
 </head>
+
 <body>
   <header class="nav">
     <div class="container nav-inner">
@@ -22,16 +153,93 @@
   </header>
 
   <main class="container">
-    <section class="card">
-      <h1>Project Overview</h1>
-      <p class="muted">
-        This page introduces the project background, objectives, and work packages.
+    <section class="page-head">
+      <h1>Team Members</h1>
+      <p>
+        This page introduces the core team members and their roles in the UK–Brazil collaboration.
+        Profile images are shown on the right and can be uploaded later.
       </p>
+    </section>
+
+    <section class="team-wrap">
+
+      <!-- Qiuji -->
+      <article class="member-card">
+        <div class="member-grid">
+          <div>
+            <h2 class="member-name">Qiuji Yi</h2>
+            <p class="member-meta">Assistant Professor (UK Principal Investigator) · Northumbria University</p>
+
+            <p class="member-text">
+              Dr Qiuji Yi is an Assistant Professor at Northumbria University, United Kingdom. His work focuses on sensing and non-destructive evaluation for engineering systems, combining advanced signal processing with data-driven modelling and experimental validation.
+              Within this project, he leads the UK team and oversees the overall research direction, methodology development, and coordination with the Brazil partner.
+            </p>
+
+            <div class="member-tags">
+              <span class="tag">Non-Destructive Testing</span>
+              <span class="tag">Sensing & Data Processing</span>
+              <span class="tag">Eddy-Current / Thermography</span>
+              <span class="tag">Project Coordination</span>
+            </div>
+          </div>
+
+          <div class="photo qiuji" aria-label="Qiuji Yi photo placeholder"></div>
+        </div>
+      </article>
+
+      <!-- Cesar -->
+      <article class="member-card">
+        <div class="member-grid">
+          <div>
+            <h2 class="member-name">Cesar</h2>
+            <p class="member-meta">Professor (Brazil Principal Investigator)</p>
+
+            <p class="member-text">
+              Prof. Cesar is the Brazil Principal Investigator and leads the experimental activities on the Brazil side. His research profile is strongly practice-oriented, with extensive experience in laboratory implementation, instrumentation, and the delivery of experimentally validated engineering solutions.
+              In this collaboration, he contributes to experimental design, platform setup, and cross-validation between modelling and measured data.
+            </p>
+
+            <div class="member-tags">
+              <span class="tag">Experimental Development</span>
+              <span class="tag">Instrumentation</span>
+              <span class="tag">Thermography / NDT</span>
+              <span class="tag">Validation</span>
+            </div>
+          </div>
+
+          <div class="photo cesar" aria-label="Cesar photo placeholder"></div>
+        </div>
+      </article>
+
+      <!-- Jingyuan -->
+      <article class="member-card">
+        <div class="member-grid">
+          <div>
+            <h2 class="member-name">Jingyuan Yang</h2>
+            <p class="member-meta">Research Associate · Northumbria University</p>
+
+            <p class="member-text">
+              Dr Jingyuan Yang is a Research Associate at Northumbria University. He received a PhD in Mechanical Engineering from the University of Birmingham, with research centred on electromagnetic non-destructive testing for infrastructure and engineering components.
+              His current work emphasises multi-physics modelling and experimental implementation, including COMSOL-based simulation, MATLAB data analysis, and the development of practical inspection workflows. In this project, he supports numerical modelling, experimental execution, and data interpretation, bridging simulation and measurements across both partners.
+            </p>
+
+            <div class="member-tags">
+              <span class="tag">COMSOL Modelling</span>
+              <span class="tag">MATLAB Data Analysis</span>
+              <span class="tag">Eddy Current Thermography</span>
+              <span class="tag">Experiment Implementation</span>
+            </div>
+          </div>
+
+          <div class="photo jingyuan" aria-label="Jingyuan Yang photo placeholder"></div>
+        </div>
+      </article>
+
     </section>
   </main>
 
   <footer class="footer">
-    <div class="container small muted">
+    <div class="container">
       © 2026 UK–Brazil Project · Northumbria University
     </div>
   </footer>
