@@ -31,114 +31,84 @@
       </p>
 
       <!-- Horizontal scrolling cards -->
-      <section class="carousel">
-        <div class="carousel-head">
+    <!-- Two-column layout: Project Overview + Latest Updates -->
+    <section class="home-grid">
+    
+      <!-- Left: Project Overview -->
+      <section class="panel">
+        <div class="panel-head">
           <h2 class="h2">Project Overview</h2>
-          <p class="muted small">
-            Scroll horizontally. Cards also auto-slide; hover to pause.
-          </p>
+          <p class="muted small">Key sections of the project website.</p>
         </div>
-
-        <div class="carousel-viewport" aria-label="Project overview cards">
-          <div class="carousel-track">
-
-            <!-- Card 1 -->
-            <a class="card-tile" href="about.html" aria-label="Project Summary">
-              <div class="tile-bg tile-project"></div>
-              <div class="tile-content">
-                <div class="tile-title">Project Summary</div>
-                <div class="tile-desc">
-                  Background, objectives, work packages, and expected impact.
-                </div>
-                <div class="tile-cta">Open →</div>
-              </div>
-            </a>
-
-            <!-- Card 2 -->
-            <a class="card-tile" href="team.html" aria-label="Team Members">
-              <div class="tile-bg tile-team"></div>
-              <div class="tile-content">
-                <div class="tile-title">Team Members</div>
-                <div class="tile-desc">
-                  UK and Brazil teams, roles, affiliations, and research focus.
-                </div>
-                <div class="tile-cta">Open →</div>
-              </div>
-            </a>
-
-            <!-- Card 3 -->
-            <a class="card-tile" href="platform.html" aria-label="Facilities">
-              <div class="tile-bg tile-facilities"></div>
-              <div class="tile-content">
-                <div class="tile-title">Facilities</div>
-                <div class="tile-desc">
-                  Experimental platform, equipment list, and measurement setup.
-                </div>
-                <div class="tile-cta">Open →</div>
-              </div>
-            </a>
-
-            <!-- Card 4 -->
-            <a class="card-tile" href="updates.html" aria-label="Latest Updates">
-              <div class="tile-bg tile-updates"></div>
-              <div class="tile-content">
-                <div class="tile-title">Latest Updates</div>
-                <div class="tile-desc">
-                  News, events, milestones, and results (to be updated).
-                </div>
-                <div class="tile-cta">Open →</div>
-              </div>
-            </a>
-
-            <!-- Duplicate set for seamless auto-scroll (optional but helps looping) -->
-            <a class="card-tile" href="about.html" aria-label="Project Summary duplicate">
-              <div class="tile-bg tile-project"></div>
-              <div class="tile-content">
-                <div class="tile-title">Project Summary</div>
-                <div class="tile-desc">
-                  Background, objectives, work packages, and expected impact.
-                </div>
-                <div class="tile-cta">Open →</div>
-              </div>
-            </a>
-
-            <a class="card-tile" href="team.html" aria-label="Team Members duplicate">
-              <div class="tile-bg tile-team"></div>
-              <div class="tile-content">
-                <div class="tile-title">Team Members</div>
-                <div class="tile-desc">
-                  UK and Brazil teams, roles, affiliations, and research focus.
-                </div>
-                <div class="tile-cta">Open →</div>
-              </div>
-            </a>
-
-            <a class="card-tile" href="platform.html" aria-label="Facilities duplicate">
-              <div class="tile-bg tile-facilities"></div>
-              <div class="tile-content">
-                <div class="tile-title">Facilities</div>
-                <div class="tile-desc">
-                  Experimental platform, equipment list, and measurement setup.
-                </div>
-                <div class="tile-cta">Open →</div>
-              </div>
-            </a>
-
-            <a class="card-tile" href="updates.html" aria-label="Latest Updates duplicate">
-              <div class="tile-bg tile-updates"></div>
-              <div class="tile-content">
-                <div class="tile-title">Latest Updates</div>
-                <div class="tile-desc">
-                  News, events, milestones, and results (to be updated).
-                </div>
-                <div class="tile-cta">Open →</div>
-              </div>
-            </a>
-
-          </div>
+    
+        <div class="tile-grid">
+    
+          <a class="card-tile" href="about.html" aria-label="Project Summary">
+            <div class="tile-bg tile-project"></div>
+            <div class="tile-content">
+              <div class="tile-title">Project Summary</div>
+              <div class="tile-desc">Background, objectives, work packages, and expected impact.</div>
+              <div class="tile-cta">Open →</div>
+            </div>
+          </a>
+    
+          <a class="card-tile" href="team.html" aria-label="Team Members">
+            <div class="tile-bg tile-team"></div>
+            <div class="tile-content">
+              <div class="tile-title">Team Members</div>
+              <div class="tile-desc">UK and Brazil teams, roles, affiliations, and research focus.</div>
+              <div class="tile-cta">Open →</div>
+            </div>
+          </a>
+    
+          <a class="card-tile" href="platform.html" aria-label="Facilities">
+            <div class="tile-bg tile-facilities"></div>
+            <div class="tile-content">
+              <div class="tile-title">Facilities</div>
+              <div class="tile-desc">Experimental platform, equipment list, and measurement setup.</div>
+              <div class="tile-cta">Open →</div>
+            </div>
+          </a>
+    
         </div>
       </section>
+    
+      <!-- Right: Latest Updates -->
+      <section class="panel">
+        <div class="panel-head">
+          <h2 class="h2">Latest Updates</h2>
+          <p class="muted small">News, events, milestones, and results.</p>
+        </div>
+    
+        <div class="updates-list">
+    
+          <!-- You will create these update pages later (e.g., update-2026-01-13.html) -->
+          <a class="update-item" href="updates.html">
+            <div class="update-title">Coming soon: update posts will be listed here</div>
+            <div class="update-meta">Click to open the Updates page.</div>
+          </a>
+    
+          <!-- Example items (uncomment later when you create pages)
+          <a class="update-item" href="updates/2026-01-13-kickoff.html">
+            <div class="update-title">2026-01-13 — Project kick-off and experiment plan</div>
+            <div class="update-meta">Meeting · Plan · Platform access</div>
+          </a>
+    
+          <a class="update-item" href="updates/2026-01-20-week2.html">
+            <div class="update-title">2026-01-20 — Baseline setup completed</div>
+            <div class="update-meta">Experiment · Data acquisition</div>
+          </a>
+          -->
+    
+        </div>
+    
+        <div class="panel-foot">
+          <a class="link-btn" href="updates.html">View all updates →</a>
+        </div>
+      </section>
+    
     </section>
+
 
     <!-- Optional: keep a compact summary section (white theme) -->
     <section class="info-grid">
