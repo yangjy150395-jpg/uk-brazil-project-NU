@@ -6,7 +6,8 @@
   <title>UK–Brazil Project (Northumbria University)</title>
   <link rel="stylesheet" href="style.css" />
 </head>
-<body>
+
+<body class="light">
   <header class="nav">
     <div class="container nav-inner">
       <a class="brand" href="index.html">UK–Brazil Project (NU)</a>
@@ -22,37 +23,142 @@
   </header>
 
   <main class="container">
-    <section class="hero">
+    <!-- Hero -->
+    <section class="hero hero-light">
       <h1>UK–Brazil Research Project</h1>
       <p class="muted">
         Project overview · Research team · Experimental facilities · Progress updates · Research outputs
       </p>
-      <div class="hero-links">
-        <a class="btn" href="about.html">Project Overview</a>
-        <a class="btn ghost" href="updates.html">Latest Updates</a>
+
+      <!-- Horizontal scrolling cards -->
+      <section class="carousel">
+        <div class="carousel-head">
+          <h2 class="h2">Project Overview</h2>
+          <p class="muted small">
+            Scroll horizontally. Cards also auto-slide; hover to pause.
+          </p>
+        </div>
+
+        <div class="carousel-viewport" aria-label="Project overview cards">
+          <div class="carousel-track">
+
+            <!-- Card 1 -->
+            <a class="card-tile" href="about.html" aria-label="Project Summary">
+              <div class="tile-bg tile-project"></div>
+              <div class="tile-content">
+                <div class="tile-title">Project Summary</div>
+                <div class="tile-desc">
+                  Background, objectives, work packages, and expected impact.
+                </div>
+                <div class="tile-cta">Open →</div>
+              </div>
+            </a>
+
+            <!-- Card 2 -->
+            <a class="card-tile" href="team.html" aria-label="Team Members">
+              <div class="tile-bg tile-team"></div>
+              <div class="tile-content">
+                <div class="tile-title">Team Members</div>
+                <div class="tile-desc">
+                  UK and Brazil teams, roles, affiliations, and research focus.
+                </div>
+                <div class="tile-cta">Open →</div>
+              </div>
+            </a>
+
+            <!-- Card 3 -->
+            <a class="card-tile" href="platform.html" aria-label="Facilities">
+              <div class="tile-bg tile-facilities"></div>
+              <div class="tile-content">
+                <div class="tile-title">Facilities</div>
+                <div class="tile-desc">
+                  Experimental platform, equipment list, and measurement setup.
+                </div>
+                <div class="tile-cta">Open →</div>
+              </div>
+            </a>
+
+            <!-- Card 4 -->
+            <a class="card-tile" href="updates.html" aria-label="Latest Updates">
+              <div class="tile-bg tile-updates"></div>
+              <div class="tile-content">
+                <div class="tile-title">Latest Updates</div>
+                <div class="tile-desc">
+                  News, events, milestones, and results (to be updated).
+                </div>
+                <div class="tile-cta">Open →</div>
+              </div>
+            </a>
+
+            <!-- Duplicate set for seamless auto-scroll (optional but helps looping) -->
+            <a class="card-tile" href="about.html" aria-label="Project Summary duplicate">
+              <div class="tile-bg tile-project"></div>
+              <div class="tile-content">
+                <div class="tile-title">Project Summary</div>
+                <div class="tile-desc">
+                  Background, objectives, work packages, and expected impact.
+                </div>
+                <div class="tile-cta">Open →</div>
+              </div>
+            </a>
+
+            <a class="card-tile" href="team.html" aria-label="Team Members duplicate">
+              <div class="tile-bg tile-team"></div>
+              <div class="tile-content">
+                <div class="tile-title">Team Members</div>
+                <div class="tile-desc">
+                  UK and Brazil teams, roles, affiliations, and research focus.
+                </div>
+                <div class="tile-cta">Open →</div>
+              </div>
+            </a>
+
+            <a class="card-tile" href="platform.html" aria-label="Facilities duplicate">
+              <div class="tile-bg tile-facilities"></div>
+              <div class="tile-content">
+                <div class="tile-title">Facilities</div>
+                <div class="tile-desc">
+                  Experimental platform, equipment list, and measurement setup.
+                </div>
+                <div class="tile-cta">Open →</div>
+              </div>
+            </a>
+
+            <a class="card-tile" href="updates.html" aria-label="Latest Updates duplicate">
+              <div class="tile-bg tile-updates"></div>
+              <div class="tile-content">
+                <div class="tile-title">Latest Updates</div>
+                <div class="tile-desc">
+                  News, events, milestones, and results (to be updated).
+                </div>
+                <div class="tile-cta">Open →</div>
+              </div>
+            </a>
+
+          </div>
+        </div>
+      </section>
+    </section>
+
+    <!-- Optional: keep a compact summary section (white theme) -->
+    <section class="info-grid">
+      <div class="info-card">
+        <h3>Theme</h3>
+        <p class="muted">Eddy Current Thermography & Non-Destructive Testing</p>
+      </div>
+      <div class="info-card">
+        <h3>Collaboration</h3>
+        <p class="muted">United Kingdom – Brazil</p>
+      </div>
+      <div class="info-card">
+        <h3>Purpose</h3>
+        <p class="muted">Documentation, progress tracking, and dissemination</p>
       </div>
     </section>
 
-    <section class="card">
-      <h2>Project Summary</h2>
-      <ul>
-        <li><b>Theme</b>: Eddy Current Thermography & Non-Destructive Testing</li>
-        <li><b>Collaboration</b>: United Kingdom – Brazil</li>
-        <li><b>Purpose</b>: Centralised platform for project documentation, progress tracking, and dissemination</li>
-      </ul>
-    </section>
-
-    <section class="card">
-      <h2>Quick Access</h2>
-      <ul>
-        <li><a href="platform.html">Experimental facilities and equipment</a></li>
-        <li><a href="updates.html">Weekly / milestone-based progress updates</a></li>
-        <li><a href="outputs.html">Publications, datasets, and code</a></li>
-      </ul>
-    </section>
   </main>
 
-  <footer class="footer">
+  <footer class="footer footer-light">
     <div class="container small muted">
       © 2026 UK–Brazil Project · Northumbria University
     </div>
