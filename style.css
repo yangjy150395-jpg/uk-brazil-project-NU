@@ -1,96 +1,215 @@
-:root {
-  --bg:#0b0f14;
-  --card:#121824;
-  --text:#e6edf3;
-  --muted:#9fb0c0;
-  --line:#223042;
-  --btn:#2b77ff;
+/* ---------- Light theme (white background) ---------- */
+:root{
+  --bg: #ffffff;
+  --text: #0f172a;
+  --muted: #475569;
+  --line: #e2e8f0;
+  --card: #ffffff;
+  --shadow: 0 10px 30px rgba(2, 6, 23, 0.08);
+  --btn: #2563eb;
+
+  --tileRadius: 16px;
+  --tileW: 320px;
+  --tileH: 180px;
 }
 
-* { box-sizing: border-box; }
-
-body {
+*{ box-sizing:border-box; }
+body{
   margin:0;
   font-family: system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
-  background:var(--bg);
-  color:var(--text);
-}
-
-a { color: inherit; text-decoration: none; }
-
-.container {
-  max-width: 980px;
-  margin: 0 auto;
-  padding: 18px 16px;
-}
-
-.nav {
-  position: sticky;
-  top:0;
-  background: rgba(11,15,20,.9);
-  border-bottom: 1px solid var(--line);
-}
-
-.nav-inner {
-  display:flex;
-  justify-content:space-between;
-  align-items:center;
-}
-
-.brand { font-weight: 700; }
-
-.menu {
-  display:flex;
-  gap: 14px;
-  flex-wrap: wrap;
-}
-
-.menu a {
-  color: var(--muted);
-}
-
-.menu a:hover {
+  background: var(--bg);
   color: var(--text);
 }
+a{ color: inherit; text-decoration:none; }
+.container{ max-width: 1100px; margin: 0 auto; padding: 18px 16px; }
 
-.hero {
-  padding: 22px 0;
+.muted{ color: var(--muted); }
+.small{ font-size: 13px; }
+
+/* ---------- Top nav ---------- */
+.nav{
+  position: sticky;
+  top:0;
+  background: rgba(255,255,255,0.92);
+  border-bottom: 1px solid var(--line);
+  backdrop-filter: blur(10px);
+  z-index: 10;
 }
-
-.hero h1 {
-  font-size: 32px;
-  margin-bottom: 8px;
-}
-
-.hero-links {
+.nav-inner{
   display:flex;
-  gap: 10px;
-  margin-top: 12px;
+  align-items:center;
+  justify-content:space-between;
+  gap: 18px;
+}
+.brand{ font-weight: 750; letter-spacing: .2px; }
+.menu{ display:flex; gap: 14px; flex-wrap:wrap; }
+.menu a{ color: var(--muted); font-weight: 600; }
+.menu a:hover{ color: var(--text); }
+
+/* ---------- Hero ---------- */
+.hero{
+  padding: 26px 0 10px;
+}
+.hero h1{
+  margin: 6px 0 10px;
+  font-size: 34px;
+  letter-spacing: -0.3px;
+}
+.h2{
+  margin: 0;
+  font-size: 18px;
 }
 
-.btn {
-  background: var(--btn);
-  padding:10px 14px;
-  border-radius: 10px;
-}
-
-.btn.ghost {
-  background: transparent;
-  border: 1px solid var(--line);
-}
-
-.card {
-  background: var(--card);
-  border: 1px solid var(--line);
-  border-radius: 14px;
+/* ---------- Carousel ---------- */
+.carousel{
+  margin-top: 18px;
   padding: 14px;
-  margin-top: 14px;
+  border: 1px solid var(--line);
+  border-radius: 18px;
+  background: #fff;
+  box-shadow: var(--shadow);
+}
+.carousel-head{
+  display:flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 12px;
+  margin-bottom: 10px;
+}
+.carousel-viewport{
+  overflow: hidden; /* for auto-scroll look */
+  border-radius: 14px;
+}
+.carousel-track{
+  display:flex;
+  gap: 14px;
+  width: max-content;
+  padding: 6px;
+
+  /* auto-scroll */
+  animation: slideX 28s linear infinite;
+}
+.carousel-viewport:hover .carousel-track{
+  animation-play-state: paused; /* hover to pause */
 }
 
-.footer {
+/* If you do NOT want auto-scroll, comment out the 2 lines above:
+   animation: slideX... and the hover rule.
+   Then enable manual scroll by replacing overflow:hidden with overflow:auto.
+*/
+
+@keyframes slideX{
+  from{ transform: translateX(0); }
+  to{ transform: translateX(-50%); } /* works because we duplicated cards */
+}
+
+/* ---------- Card tiles ---------- */
+.card-tile{
+  position: relative;
+  width: var(--tileW);
+  height: var(--tileH);
+  border-radius: var(--tileRadius);
+  overflow: hidden;
+  border: 1px solid var(--line);
+  background: #f8fafc;
+  box-shadow: 0 8px 20px rgba(2,6,23,0.08);
+  flex: 0 0 auto;
+}
+.card-tile:hover{
+  transform: translateY(-2px);
+  transition: transform 120ms ease;
+}
+
+.tile-bg{
+  position:absolute;
+  inset:0;
+  background-size: cover;
+  background-position: center;
+  filter: saturate(1.05);
+  transform: scale(1.02);
+}
+
+/* Background images (place images under /images/...) */
+/* If you do not upload images yet, these gradients will show instead. */
+.tile-project{
+  background-image:
+    linear-gradient(120deg, rgba(37,99,235,0.75), rgba(15,23,42,0.15)),
+    url("images/project.jpg");
+}
+.tile-team{
+  background-image:
+    linear-gradient(120deg, rgba(16,185,129,0.65), rgba(15,23,42,0.10)),
+    url("images/team.jpg");
+}
+.tile-facilities{
+  background-image:
+    linear-gradient(120deg, rgba(245,158,11,0.70), rgba(15,23,42,0.10)),
+    url("images/facilities.jpg");
+}
+.tile-updates{
+  background-image:
+    linear-gradient(120deg, rgba(168,85,247,0.65), rgba(15,23,42,0.10)),
+    url("images/updates.jpg");
+}
+
+.tile-content{
+  position:absolute;
+  inset:0;
+  display:flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  padding: 14px;
+  color: #ffffff;
+  background: linear-gradient(180deg, rgba(2,6,23,0.00) 35%, rgba(2,6,23,0.65) 100%);
+}
+.tile-title{
+  font-size: 18px;
+  font-weight: 800;
+  margin-bottom: 6px;
+}
+.tile-desc{
+  font-size: 13px;
+  opacity: 0.92;
+  line-height: 1.35;
+}
+.tile-cta{
+  margin-top: 10px;
+  font-size: 13px;
+  font-weight: 700;
+  opacity: 0.95;
+}
+
+/* ---------- Info cards ---------- */
+.info-grid{
+  display:grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 12px;
+  margin-top: 16px;
+}
+.info-card{
+  border: 1px solid var(--line);
+  border-radius: 16px;
+  padding: 14px;
+  background: #fff;
+  box-shadow: var(--shadow);
+}
+.info-card h3{
+  margin: 0 0 6px;
+  font-size: 14px;
+}
+.info-card p{
+  margin: 0;
+  line-height: 1.45;
+}
+
+/* ---------- Footer ---------- */
+.footer{
   border-top: 1px solid var(--line);
-  margin-top: 28px;
+  margin-top: 26px;
 }
 
-.muted { color: var(--muted); }
-.small { font-size: 13px; }
+/* ---------- Responsive ---------- */
+@media (max-width: 900px){
+  :root{ --tileW: 280px; --tileH: 170px; }
+  .info-grid{ grid-template-columns: 1fr; }
+}
