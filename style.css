@@ -280,3 +280,14 @@ a{ color: inherit; text-decoration: none; }
   .contact-grid{ grid-template-columns: 1fr; }
   .contact-line{ grid-template-columns: 72px 1fr; }
 }
+
+
+/* Contact role line (bold, consistent) */
+.contact-role{
+  margin: 0 0 10px;
+  font-weight: 800;
+  color: var(--text);
+  font-size: 14px;
+}
+
+.contact-line .value{ font-weight: 800; }
