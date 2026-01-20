@@ -1,0 +1,112 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Key Research Questions | UK–Brazil Project (NU)</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+  <header class="nav">
+    <div class="container nav-inner">
+      <a class="brand" href="index.html">UK–Brazil Project (NU)</a>
+      <nav class="menu">
+        <a href="about.html">Project</a>
+        <a href="team.html">Team</a>
+        <a href="platform.html">Facilities</a>
+        <a href="updates.html">Updates</a>
+        <a href="outputs.html">Outputs</a>
+        <a href="contact.html">Contact</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="container">
+    <section class="hero">
+      <h1>Key Research Questions</h1>
+      <p class="sub">
+        Scientific questions that guide modelling, inversion, and experimental validation for curved composite wind-turbine blades.
+      </p>
+    </section>
+
+    <section class="panel">
+      <div class="panel-head">
+        <h2>Research focus</h2>
+        <p class="muted">
+          The project targets reliable thermographic reconstruction and inversion on curved, anisotropic, layered structures under realistic inspection constraints.
+        </p>
+      </div>
+
+      <div class="info-grid">
+        <div class="info-card">
+          <h3>RQ1: Curvature and anisotropy</h3>
+          <p>How do curvature and fibre-driven anisotropy reshape eddy-current distribution and transient heat diffusion, and how can models capture this efficiently?</p>
+        </div>
+
+        <div class="info-card">
+          <h3>RQ2: Fibre-direction representation</h3>
+          <p>How can fibre directions be represented consistently on a curved surface (tangent-plane mapping or curvilinear coordinates) for conductivity and thermal tensors?</p>
+        </div>
+
+        <div class="info-card">
+          <h3>RQ3: Inversion and reconstruction</h3>
+          <p>Which reconstruction/inversion strategies remain stable under noise, lift-off variation, and limited access, while providing interpretable defect indicators?</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="panel">
+      <div class="panel-head">
+        <h2>How we address them</h2>
+        <p class="muted">A structured mapping from questions to methods and validation.</p>
+      </div>
+
+      <div class="info-grid">
+        <div class="info-card">
+          <h3>Modelling</h3>
+          <p>Multi-physics simulation with geometry parameterisation, coil excitation design, and anisotropic tensor definitions aligned with fibre directions.</p>
+        </div>
+
+        <div class="info-card">
+          <h3>Algorithms</h3>
+          <p>Thermographic feature extraction and model-informed inversion designed for curved composite structures.</p>
+        </div>
+
+        <div class="info-card">
+          <h3>Validation</h3>
+          <p>Controlled samples and experimental benchmarking to quantify sensitivity, robustness, and repeatability.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="panel">
+      <div class="panel-head">
+        <h2>Placeholders for figures</h2>
+        <p class="muted">You can insert a “questions → methods → outputs” diagram later.</p>
+      </div>
+
+      <div class="info-grid">
+        <div class="info-card">
+          <h3>Figure A</h3>
+          <p class="muted">Conceptual map: RQs linked to modelling, inversion, and experiments.</p>
+        </div>
+        <div class="info-card">
+          <h3>Figure B</h3>
+          <p class="muted">Example geometry parameterisation and fibre-direction representation schematic.</p>
+        </div>
+        <div class="info-card">
+          <h3>Figure C</h3>
+          <p class="muted">Example reconstruction outputs and validation metrics.</p>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container">
+      © 2026 UK–Brazil ISPF scheme
+    </div>
+  </footer>
+</body>
+</html>
