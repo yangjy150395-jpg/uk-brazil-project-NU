@@ -1,0 +1,104 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>What is ECPT | UK–Brazil Project (NU)</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+  <header class="nav">
+    <div class="container nav-inner">
+      <a class="brand" href="index.html">UK–Brazil Project (NU)</a>
+      <nav class="menu">
+        <a href="about.html">Project</a>
+        <a href="team.html">Team</a>
+        <a href="platform.html">Facilities</a>
+        <a href="updates.html">Updates</a>
+        <a href="outputs.html">Outputs</a>
+        <a href="contact.html">Contact</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="container">
+    <section class="hero">
+      <h1>What is Eddy Current Pulsed Thermography (ECPT)</h1>
+      <p class="sub">
+        A short technical introduction to principles, instrumentation, and typical inspection workflow.
+      </p>
+    </section>
+
+    <section class="panel">
+      <div class="panel-head">
+        <h2>Overview</h2>
+        <p class="muted">
+          ECPT combines electromagnetic induction with infrared thermography to reveal subsurface features through transient thermal contrast.
+        </p>
+      </div>
+
+      <div class="info-grid">
+        <div class="info-card">
+          <h3>Working principle</h3>
+          <p>Induced eddy currents generate Joule heating; defects and material inhomogeneity perturb current flow and heat diffusion.</p>
+        </div>
+
+        <div class="info-card">
+          <h3>Typical system</h3>
+          <p>Excitation (coil + power), control/synchronisation, infrared camera, and scanning/positioning as required.</p>
+        </div>
+
+        <div class="info-card">
+          <h3>Why ECPT for composites</h3>
+          <p>Non-contact thermal sensing with fast area coverage, with modelling needed to handle anisotropy, curvature, and layered structures.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="panel">
+      <div class="panel-head">
+        <h2>Inspection workflow</h2>
+        <p class="muted">A high-level pipeline from excitation to interpretation (no equations).</p>
+      </div>
+
+      <ol class="muted" style="line-height: 1.8;">
+        <li>Define the inspection target and expected defect types.</li>
+        <li>Design excitation (frequency, pulse, coil geometry) and measurement setup.</li>
+        <li>Acquire thermal sequence and auxiliary signals (if available).</li>
+        <li>Pre-process data (registration, denoising, normalisation).</li>
+        <li>Extract features (transient contrast, phase-like metrics, model-based inversion).</li>
+        <li>Validate against reference samples and complementary NDT methods.</li>
+      </ol>
+    </section>
+
+    <section class="panel">
+      <div class="panel-head">
+        <h2>Placeholders for figures</h2>
+        <p class="muted">You can insert diagrams later.</p>
+      </div>
+
+      <div class="info-grid">
+        <div class="info-card">
+          <h3>Figure A</h3>
+          <p class="muted">ECPT principle schematic (coil → eddy currents → heating → IR response).</p>
+        </div>
+        <div class="info-card">
+          <h3>Figure B</h3>
+          <p class="muted">Typical experimental layout and synchronisation chain.</p>
+        </div>
+        <div class="info-card">
+          <h3>Figure C</h3>
+          <p class="muted">Example thermal sequence and reconstructed output map.</p>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container">
+      © 2026 UK–Brazil ISPF scheme
+    </div>
+  </footer>
+</body>
+</html>
