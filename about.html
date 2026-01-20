@@ -26,41 +26,29 @@
     <!-- Page heading -->
     <section class="hero">
       <h1>Project Summary</h1>
-      <p class="sub">
-        Thermographic reconstruction and inversion for wind turbine blades
-      </p>
+      <p class="sub">Thermographic reconstruction and inversion for wind turbine blades</p>
     </section>
 
     <!-- ================= Project Introduction ================= -->
     <section class="panel">
       <div class="panel-head">
         <h2>Project Introduction</h2>
-        <p class="muted">Funding, partners, and scope.</p>
+        <p class="muted">Funding scheme and team structure.</p>
       </div>
 
       <div class="prose">
         <p>
           This project is funded by the International Science Partnerships Fund (ISPF) under the
-          <em>International Collaboration Awards 2024 – Brazil and South Africa</em> scheme.
-          The awarded grant reference is <strong>ICAO/R1/241110</strong>, with a total funding
-          value of <strong>£208,069.04</strong>.
+          International Collaboration Awards 2024 – Brazil and South Africa scheme.
         </p>
 
         <p>
-          The project is led by <strong>Dr Qiuji Yi</strong> (Northumbria University, UK) in collaboration
-          with <strong>Professor Cesar Giron Camerini</strong> (Federal University of Rio de Janeiro, Brazil).
-          It establishes a UK–Brazil research partnership focused on advancing non-destructive testing
-          (NDT) techniques for wind turbine blade inspection, with validation in Brazilian wind-energy
-          contexts.
+          The three-year programme brings together a UK–Brazil team led by Northumbria University (UK) and the
+          Federal University of Rio de Janeiro (Brazil), combining expertise in thermal NDE, electromagnetic
+          excitation, thermographic imaging, and data interpretation. The collaboration involves senior academic
+          support and early-career researchers who contribute to experimental development, data analysis, and
+          cross-institution knowledge exchange.
         </p>
-
-        <!-- IMAGE PLACEHOLDER -->
-        <figure class="figure">
-          <img src="images/placeholder_funding.jpg" alt="Funding and collaboration overview" />
-          <figcaption>
-            Figure 1. Project funding and UK–Brazil collaboration overview.
-          </figcaption>
-        </figure>
       </div>
     </section>
 
@@ -68,85 +56,88 @@
     <section class="panel" style="margin-top:16px;">
       <div class="panel-head">
         <h2>Overview</h2>
-        <p class="muted">Background and technical challenges.</p>
+        <p class="muted">Introduction and background (aligned with Figure 1).</p>
       </div>
 
       <div class="prose">
         <p>
-          Wind turbine blades are critical structural components whose integrity directly affects
-          energy efficiency and operational safety. Thermography has become an important
-          non-destructive evaluation (NDE) technique for composite structures, where controlled
-          thermal excitation and surface temperature monitoring are used to infer subsurface
-          defects and material degradation <sup>[1,2]</sup>.
+          Brazil is expanding wind energy as part of its long-term decarbonisation pathway, and wind turbine blades
+          (WTBs) are critical assets whose integrity directly affects safety and operational efficiency. Thermography
+          is a widely used non-destructive evaluation (NDE) technique for WTB inspection: a controlled heat stimulus
+          is applied and the resulting surface temperature evolution is monitored to infer subsurface anomalies that
+          alter thermal transport behaviour <sup>[1,2]</sup>.
         </p>
 
         <p>
-          In practical applications, wind turbine blades present complex curved geometries,
-          edges, and thickness variations. These features lead to non-uniform heating, lateral
-          heat diffusion, and shadowing effects, which significantly complicate defect
-          characterisation using conventional thermographic approaches <sup>[3,4]</sup>.
-          The problem is further exacerbated by the anisotropic thermal behaviour of composite
-          materials, which challenges traditional forward modelling and interpretation assumptions
-          <sup>[5]</sup>.
+          In real blades, conventional thermographic inspection faces key challenges. First, complex curved geometry
+          (especially corners and edges) can cause non-uniform heating and shadowing effects, reducing the reliability
+          of defect characterisation <sup>[1,2]</sup>. Second, accurate interpretation requires robust forward heat-transfer
+          modelling, which becomes computationally demanding and error-prone in complex geometries and for anisotropic
+          composite materials <sup>[3]</sup>. Third, many inversion approaches rely on simplified heat-transfer assumptions;
+          their accuracy can degrade when heat flow is influenced by complex geometries, heterogeneous materials, and
+          varying boundary conditions <sup>[4]</sup>.
         </p>
 
-        <!-- IMAGE PLACEHOLDER -->
+        <p>
+          Figure 1 provides a high-level view of the project context and the overall inspection-to-interpretation workflow
+          for curved composite blades, motivating the need for geometry-aware thermography reconstruction and inversion.
+        </p>
+
+        <!-- IMAGE PLACEHOLDER: Figure 1 -->
         <figure class="figure">
-          <img src="images/placeholder_blade.jpg" alt="Thermography on curved wind turbine blades" />
-          <figcaption>
-            Figure 2. Thermography challenges associated with curved wind turbine blade geometries.
-          </figcaption>
+          <!-- Replace with your file, e.g., images/fig1_background.jpg -->
+          <img src="images/placeholder_fig1.jpg" alt="Figure 1 placeholder" />
+          <figcaption>Figure 1. Background and high-level workflow (replace with your Figure 1).</figcaption>
         </figure>
       </div>
     </section>
 
-    <!-- ================= Aims ================= -->
+    <!-- ================= Aims and Methodology ================= -->
     <section class="panel" style="margin-top:16px;">
       <div class="panel-head">
-        <h2>Aims</h2>
-        <p class="muted">High-level objectives of the project.</p>
+        <h2>Aims and Methodology</h2>
+        <p class="muted">High-level aims and methodology (aligned with Figures 2 and 3).</p>
       </div>
 
       <div class="prose">
         <p>
-          The overall aim of this project is to enhance thermographic inspection capability for
-          wind turbine blades by developing reconstruction and inversion methodologies that are
-          better suited to complex geometries and realistic heat-transfer conditions.
+          To address the above challenges, the project aims to improve the effectiveness of wind turbine blade inspections
+          by developing next-generation thermography reconstruction and inversion methods, leveraging complementary UK and
+          Brazilian expertise. The focus is on improving the reliability of thermal data acquisition on curved composite
+          surfaces, and enabling more interpretable, physics-consistent reconstruction for defect assessment
+          <sup>[3,4]</sup>.
         </p>
 
         <p>
-          Specifically, the project seeks to: (i) improve the reliability of thermal data acquisition
-          on curved composite surfaces; (ii) enable more intuitive, depth-aware interpretation of
-          thermographic signals through physics-informed inversion; and (iii) demonstrate the
-          applicability of the proposed approaches in industry-relevant inspection scenarios
-          within the Brazilian wind-energy sector <sup>[3,6]</sup>.
+          As illustrated in Figure 2, the methodology includes enhancing thermal excitation and measurement quality for
+          curved blades. This is achieved through advanced excitation strategies, such as coded/pulse-compression concepts
+          that improve signal-to-noise ratio and resolution, and coil/excitation configurations designed to better adapt
+          to curved geometries <sup>[5]</sup>. These developments target more uniform, repeatable heating and more informative
+          thermal responses for subsequent interpretation.
         </p>
 
-        <!-- IMAGE PLACEHOLDER -->
+        <!-- IMAGE PLACEHOLDER: Figure 2 -->
         <figure class="figure">
-          <img src="images/placeholder_aims.jpg" alt="High-level project aims" />
-          <figcaption>
-            Figure 3. High-level aims of the project (conceptual illustration).
-          </figcaption>
+          <!-- Replace with your file, e.g., images/fig2_excitation.jpg -->
+          <img src="images/placeholder_fig2.jpg" alt="Figure 2 placeholder" />
+          <figcaption>Figure 2. Excitation and data acquisition concept (replace with your Figure 2).</figcaption>
         </figure>
-      </div>
-    </section>
 
-    <!-- ================= Expected Impact ================= -->
-    <section class="panel" style="margin-top:16px;">
-      <div class="panel-head">
-        <h2>Expected Impact</h2>
-        <p class="muted">Scientific and industrial relevance.</p>
-      </div>
-
-      <div class="prose">
         <p>
-          By improving defect detectability and interpretability for wind turbine blades, the
-          project is expected to support safer operation, more effective maintenance strategies,
-          and extended service life of wind-energy assets. Beyond wind energy, the developed
-          methodologies may be transferable to other composite structures in sectors such as
-          aerospace and renewable-energy infrastructure <sup>[4,6]</sup>.
+          Figure 3 summarises the reconstruction and inversion direction: the project advances thermography reconstruction
+          by combining physics-based understanding with modern learning-based tools, aiming for robust performance under
+          realistic heat-transfer conditions. In particular, wave-inspired thermal reconstruction concepts and physics-informed
+          learning (for example, incorporating physical loss and constraints during model training) are used to improve the
+          fidelity and interpretability of reconstructed results while remaining adaptable to different blade designs and
+          operating scenarios <sup>[6]</sup>.
         </p>
+
+        <!-- IMAGE PLACEHOLDER: Figure 3 -->
+        <figure class="figure">
+          <!-- Replace with your file, e.g., images/fig3_reconstruction.jpg -->
+          <img src="images/placeholder_fig3.jpg" alt="Figure 3 placeholder" />
+          <figcaption>Figure 3. Reconstruction and inversion pipeline (replace with your Figure 3).</figcaption>
+        </figure>
       </div>
     </section>
 
@@ -158,16 +149,31 @@
 
       <div class="prose">
         <ol class="refs">
-          <li>G. Y. Tian et al., “Eddy current pulsed thermography,” <em>IEEE Transactions on Industrial Electronics</em>, 63(10), 2016.</li>
-          <li>C. G. Camerini et al., “Thermographic inspection of composite structures,” <em>Journal of Nondestructive Evaluation</em>, 40(3), 2021.</li>
-          <li>Q. Yi et al., “Thermal inversion for composite materials,” <em>Composites Part B: Engineering</em>, 178, 2019.</li>
-          <li>Q. Yi et al., “Thermographic inspection of curved structures,” <em>NDT &amp; E International</em>, 102, 2019.</li>
-          <li>Q. Yi et al., “Anisotropic heat transfer in composites,” <em>NDT &amp; E International</em>, 122, 2021.</li>
-          <li>G. Thummerer et al., “Advanced thermal reconstruction methods,” <em>NDT &amp; E International</em>, 112, 2020.</li>
+          <li>G.Y. Tian., et al. <em>IEEE Transactions on Industrial Electronics</em> 63.10 (2016): 6305-6315.</li>
+          <li>Cesar Giron Camerini et al. <em>Journal of Nondestructive Evaluation</em> 40.3 (2021): 58.</li>
+          <li>Yi, Q., et al. <em>Composites Part B: Engineering</em> 178 (2019): 107461.</li>
+          <li>Yi, Q., et al. <em>NDT &amp; E International</em> 122 (2021): 102474.</li>
+          <li>Yi, Q., et al. <em>NDT &amp; E International</em> 102 (2019): 264-273.</li>
+          <li>Thummerer, G., et al. <em>NDT &amp; E International</em> 112 (2020): 102239.</li>
         </ol>
       </div>
     </section>
 
+    <!-- Quick links -->
+    <section class="info-grid" style="margin-top:16px;">
+      <div class="info-card">
+        <h3>Team</h3>
+        <p><a href="team.html">Meet the project members →</a></p>
+      </div>
+      <div class="info-card">
+        <h3>Facilities</h3>
+        <p><a href="platform.html">Experimental platform and equipment →</a></p>
+      </div>
+      <div class="info-card">
+        <h3>Updates</h3>
+        <p><a href="updates.html">News, milestones, and outcomes →</a></p>
+      </div>
+    </section>
   </main>
 
   <footer class="footer">
@@ -180,12 +186,13 @@
   <style>
     .prose { line-height: 1.65; color: #0f172a; }
     .prose p { margin: 10px 0; color: #334155; }
-    .figure { margin: 14px 0; border: 1px solid #e2e8f0; border-radius: 16px; overflow: hidden; }
+    .figure { margin: 14px 0; border: 1px solid #e2e8f0; border-radius: 16px; overflow: hidden; background:#fff; }
     .figure img { width: 100%; display: block; }
     .figure figcaption { padding: 10px 12px; font-size: 12.5px; color: #475569; border-top: 1px solid #e2e8f0; }
     .refs { margin-left: 18px; }
     .refs li { margin: 8px 0; }
     sup { font-size: 0.75em; }
+    a { text-decoration: underline; }
   </style>
 </body>
 </html>
