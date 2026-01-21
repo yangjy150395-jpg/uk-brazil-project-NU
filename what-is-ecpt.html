@@ -3,43 +3,56 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>What is ECPT | UK–Brazil ISPF scheme</title>
+  <title>What is ECPT? | UK–Brazil ISPF scheme</title>
   <link rel="stylesheet" href="style.css" />
 
-  <!-- Page-specific layout (safe to keep here) -->
+  <!-- Page-specific layout (safe to keep here so you do not need to touch style.css) -->
   <style>
     .split{
-      display: grid;
-      grid-template-columns: 1.25fr 1fr;
-      gap: 18px;
-      align-items: start;
+      display:flex;
+      gap:18px;
+      align-items:stretch;
+      margin:14px 0;
     }
-    .media{
+    .split-text{
+      flex: 1.15;
+      min-width: 260px;
+    }
+    .split-media{
+      flex: 0.85;
+      min-width: 240px;
+      background: rgba(0,0,0,0.03);
       border-radius: 14px;
-      overflow: hidden;
-      border: 1px solid rgba(255,255,255,0.08);
-      background: rgba(255,255,255,0.02);
+      padding: 10px;
+      display:flex;
+      align-items:center;
+      justify-content:center;
     }
-    .media img{
-      width: 100%;
-      height: auto;
-      display: block;
+    .split-media img{
+      width:100%;
+      height:auto;
+      border-radius: 12px;
+      display:block;
     }
-    .caption{
-      font-size: 0.92rem;
-      color: rgba(255,255,255,0.75);
-      padding: 10px 12px;
+    .ref{
+      font-size: 0.85em;
+      vertical-align: super;
+      line-height: 0;
     }
-    .refs ol{
-      margin: 8px 0 0 18px;
-      padding: 0;
+    .refs{
+      margin: 0;
+      padding-left: 18px;
     }
     .refs li{
-      margin: 6px 0;
-      line-height: 1.45;
+      margin: 10px 0;
+    }
+    .note{
+      margin-top: 8px;
+      font-size: 0.95em;
     }
     @media (max-width: 860px){
-      .split{ grid-template-columns: 1fr; }
+      .split{ flex-direction: column; }
+      .split-media{ order: -1; }
     }
   </style>
 </head>
@@ -60,11 +73,11 @@
   </header>
 
   <main class="container">
+
     <section class="hero">
-      <h1>What is ECPT</h1>
+      <h1>What is ECPT?</h1>
       <p class="sub">
-        Eddy Current Pulsed Thermography (ECPT), also known as induction thermography, is an active infrared
-        thermography technique for non-destructive evaluation of conductive materials and structures.<sup>[1][4]</sup>
+        Eddy Current Pulsed Thermography (ECPT) is an active thermography method that couples electromagnetic induction with infrared imaging for rapid, non-contact inspection.
       </p>
     </section>
 
@@ -72,60 +85,65 @@
     <section class="panel">
       <div class="panel-head">
         <h2>Background</h2>
-        <p class="muted">Why ECPT is used in non-destructive testing.</p>
+        <p class="muted">Why ECPT matters for fast, large-area inspection.</p>
       </div>
 
       <div class="split">
-        <div>
+        <div class="split-text">
           <p>
-            Infrared thermography is widely used in non-destructive testing because it enables non-contact, wide-area
-            inspection and fast visualisation of subsurface anomalies through surface temperature evolution.<sup>[1]</sup>
-            In active thermography, an external stimulus introduces heat, and a thermal camera records the transient
-            response. Defects and material variations modify heat generation or heat flow, producing measurable thermal
-            contrast on the surface.<sup>[1]</sup>
+            Eddy Current Pulsed Thermography (ECPT), often discussed alongside <em>inductive thermography</em>, is an active inspection technique in which a short electromagnetic excitation is used to generate transient heating, and an infrared (IR) camera records the resulting surface temperature evolution.<span class="ref">[6]</span>
           </p>
+
           <p>
-            ECPT provides the stimulus electromagnetically. A pulsed (or modulated) magnetic field induces eddy currents
-            in an electrically conductive target, producing rapid heating that is strongly linked to electrical and magnetic
-            properties. This coupling is valuable for detecting surface-breaking cracks and near-surface discontinuities
-            that disturb current flow.<sup>[2][4]</sup>
+            ECPT is particularly attractive when a fast, non-contact method is needed over a relatively large area, and when the inspection task benefits from automated analysis of thermal sequences.<span class="ref">[4]</span><span class="ref">[6]</span>
+          </p>
+
+          <p>
+            Beyond metals, ECPT-type approaches have also been demonstrated for electrically conductive composites, including CFRP, where the current preferentially follows the carbon fibre network and can support defect-sensitive heating patterns.<span class="ref">[1]</span><span class="ref">[6]</span>
+          </p>
+
+          <p>
+            In practice, ECPT also sits within a broader family of eddy-current-based NDT methods where robust sensing hardware and embedded acquisition are critical for deployment in real inspection environments.<span class="ref">[5]</span>
           </p>
         </div>
 
-        <figure class="media">
-          <img src="assets/img/ecpt-bg.jpg" alt="Background image for infrared thermography and NDT (replace with your selected image)" />
-          <figcaption class="caption">Suggested image: “infrared thermography in industrial NDT”.</figcaption>
-        </figure>
+        <div class="split-media">
+          <!-- Replace with your own image file -->
+          <img src="images/ecpt_background.jpg" alt="ECPT background illustration (replace this image)" />
+        </div>
       </div>
     </section>
 
-    <!-- Physical principle -->
+    <!-- Principle -->
     <section class="panel">
       <div class="panel-head">
-        <h2>Physical principle</h2>
-        <p class="muted">How electromagnetic heating becomes a thermal image.</p>
+        <h2>Principle</h2>
+        <p class="muted">How electromagnetic heating becomes a thermal signature of damage.</p>
       </div>
 
       <div class="split">
-        <div>
+        <div class="split-text">
           <p>
-            In ECPT, an excitation coil generates a time-varying magnetic field. The field induces eddy currents within the
-            skin depth of the specimen, and Joule losses produce a localised temperature rise. For ferromagnetic targets,
-            additional loss mechanisms can contribute to heating depending on the excitation configuration and material
-            state.<sup>[2][4]</sup>
+            In ECPT, an excitation coil driven by an alternating current induces eddy currents in an electrically conductive target. Due to ohmic resistance, Joule heating is generated, and the transient temperature field is captured by an IR camera.<span class="ref">[6]</span>
           </p>
+
           <p>
-            Defects such as cracks, corrosion features, and inclusions perturb current density and alter heat generation and
-            diffusion pathways. An infrared camera records the transient surface temperature sequence, enabling defect
-            visualisation and quantitative feature extraction (for example, temporal contrast or phase-like metrics under
-            modulated excitation).<sup>[2][3][4]</sup>
+            Defects such as cracks, lack-of-fusion, or delamination can disturb <em>both</em> the eddy-current distribution and subsequent heat flow, producing local temperature contrast that evolves over time and can be analysed for detection and characterisation.<span class="ref">[6]</span>
+          </p>
+
+          <p>
+            The excitation configuration matters. Different coil arrangements (for example, line coils, Helmholtz-type coils, or ferrite-yoke-assisted setups) are used to trade off heating uniformity, inspection sensitivity, and suitability for complex geometries.<span class="ref">[4]</span>
+          </p>
+
+          <p>
+            A widely used enhancement strategy is pulse-compression-based ECPT (often referred to as ECPuCT), where coded excitation and matched-filter-style processing improve signal-to-noise and enable more stable feature extraction from the thermal impulse response.<span class="ref">[1]</span><span class="ref">[2]</span>
           </p>
         </div>
 
-        <figure class="media">
-          <img src="assets/img/ecpt-principle.jpg" alt="ECPT principle schematic (replace with your selected schematic)" />
-          <figcaption class="caption">Suggested image: schematic showing coil excitation, eddy currents, and infrared sensing.</figcaption>
-        </figure>
+        <div class="split-media">
+          <!-- Replace with your own image file -->
+          <img src="images/ecpt_principle.jpg" alt="ECPT principle schematic (replace this image)" />
+        </div>
       </div>
     </section>
 
@@ -133,28 +151,28 @@
     <section class="panel">
       <div class="panel-head">
         <h2>Applications</h2>
-        <p class="muted">Typical use cases in engineering inspection.</p>
+        <p class="muted">Typical inspection tasks where ECPT has shown strong capability.</p>
       </div>
 
       <div class="split">
-        <div>
+        <div class="split-text">
           <p>
-            ECPT and induction thermography are commonly applied to surface crack detection in steel components, rails,
-            gears, and other safety-critical metallic parts. The technique is attractive for automation because it can be
-            non-contact and produces intuitive thermal images that support rapid screening.<sup>[3][4]</sup>
+            <strong>Crack detection and sizing in metals.</strong> Pulse-compression ECPT has been used to detect surface and subsurface defects in aluminium, and to quantitatively relate thermal-response features (for example, a crossing-point feature) to defect depth in a monotonic way under controlled conditions.<span class="ref">[2]</span>
           </p>
+
           <p>
-            Beyond crack detection, ECPT has been investigated for characterising corrosion-related damage, material
-            degradation, and other discontinuities where electromagnetic and thermal responses provide complementary
-            sensitivity. Excitation coil design and configuration (for example, line coils, Helmholtz coils, and yoke-based
-            arrangements) strongly influence heating uniformity and inspection coverage.<sup>[2][4]</sup>
+            <strong>Material and defect characterisation with tailored excitation.</strong> ECPT excitation configurations have been systematically studied for ferromagnetic and non-ferromagnetic components, with comparisons against conventional line-coil setups and discussion of applicability to complex shapes (for example, blade edges and rail tracks).<span class="ref">[4]</span>
+          </p>
+
+          <p>
+            <strong>Complex weld geometries.</strong> Recent work has also demonstrated ECPT-based detection and reconstruction of welding defects in irregular geometries, highlighting ongoing progress toward more challenging, real-world components where geometry is not ideal.<span class="ref">[3]</span>
           </p>
         </div>
 
-        <figure class="media">
-          <img src="assets/img/ecpt-apps.jpg" alt="Example ECPT thermogram or application image (replace with your selected image)" />
-          <figcaption class="caption">Suggested image: thermogram examples for cracks or corrosion inspection.</figcaption>
-        </figure>
+        <div class="split-media">
+          <!-- Replace with your own image file -->
+          <img src="images/ecpt_applications.jpg" alt="ECPT applications example (replace this image)" />
+        </div>
       </div>
     </section>
 
@@ -162,63 +180,104 @@
     <section class="panel">
       <div class="panel-head">
         <h2>Applications for WTB</h2>
-        <p class="muted">How thermography relates to wind turbine blade inspection.</p>
+        <p class="muted">How ECPT and thermography connect to wind turbine blade inspection.</p>
       </div>
 
       <div class="split">
-        <div>
+        <div class="split-text">
           <p>
-            Wind turbine blade (WTB) structures often involve composite materials (GFRP and CFRP), adhesive joints, and
-            layered architectures. Thermography has been studied for detecting delamination-like features and internal
-            structures in WTB-related composites, including outdoor inspection approaches that exploit solar excitation and
-            environmental transients.<sup>[5][6]</sup>
+            Wind turbine blades (WTBs) are predominantly composite structures where common damage modes include delamination, debonding, and impact-related defects. Thermography is attractive for WTBs because it can provide rapid, wide-area screening and can be integrated with automated data processing pipelines.<span class="ref">[8]</span><span class="ref">[9]</span>
           </p>
+
           <p>
-            In laboratory and monitoring contexts, alternative heating strategies (for example, laser-based thermography)
-            have also been explored for WTB inspection, particularly when non-contact operation and large-area coverage are
-            required. These studies motivate modelling and reconstruction methods that account for complex geometry and
-            anisotropic heat transfer in blade structures.<sup>[7]</sup>
+            For electrically conductive regions (for example, CFRP substructures), ECPT-type excitation can generate defect-sensitive heating patterns, and pulse-compression strategies have been shown to support quantitative depth-related analysis in CFRP delamination studies.<span class="ref">[1]</span><span class="ref">[6]</span>
+          </p>
+
+          <p>
+            For non-conductive composite regions (for example, GFRP), ECPT-inspired approaches can be enabled via an <em>inductive heating layer</em>, which introduces controlled heating suitable for quantitative defect evaluation in glass-fibre reinforced polymer specimens.<span class="ref">[7]</span>
+          </p>
+
+          <p class="note">
+            In this project, the goal is to move beyond “visual hot-spot screening” toward thermographic reconstruction and inversion tailored to curved blade geometries, so that defect signatures become more interpretable and more comparable across positions on the blade.
           </p>
         </div>
 
-        <figure class="media">
-          <img src="assets/img/ecpt-wtb.jpg" alt="Thermography for wind turbine blade (replace with your selected image)" />
-          <figcaption class="caption">Suggested image: wind turbine blade thermography inspection or outdoor solar thermography.</figcaption>
-        </figure>
+        <div class="split-media">
+          <!-- Replace with your own image file -->
+          <img src="images/ecpt_wtb.jpg" alt="Thermography for wind turbine blades (replace this image)" />
+        </div>
       </div>
     </section>
 
     <!-- References -->
-    <section class="panel refs">
+    <section class="panel">
       <div class="panel-head">
         <h2>References</h2>
-        <p class="muted">Numbered references for the citations used above.</p>
+        <p class="muted">References are cited in the text using superscripts [1]–[9].</p>
       </div>
 
-      <ol>
+      <ol class="refs">
         <li>
-          X. P. Maldague, <i>Theory and Practice of Infrared Technology for Nondestructive Testing</i>.
-          Wiley-Interscience, 2001. ISBN: 978-0-471-18190-3.
+          Q. Yi, G. Y. Tian, H. Malekmohammadi, J. Zhu, S. Laureti, and M. Ricci,
+          “New features for delamination depth evaluation in carbon fiber reinforced plastic materials using eddy current pulse-compression thermography,”
+          <em>NDT &amp; E International</em>, vol. 102, pp. 264–273, 2019. doi: 10.1016/j.ndteint.2018.12.010
         </li>
+
         <li>
-          G. Y. Tian, Y. Gao, K. Li, Y. Wang, B. Gao, and Y. He, “Eddy Current Pulsed Thermography with Different
-          Excitation Configurations for Metallic Material and Defect Characterization,” <i>Sensors</i>, vol. 16, no. 6, 843, 2016.
-          doi: 10.3390/s16060843.
+          Q. Yi, H. Malekmohammadi, G. Y. Tian, S. Laureti, and M. Ricci,
+          “Quantitative Evaluation of Crack Depths on Thin Aluminum Plate Using Eddy Current Pulse-Compression Thermography,”
+          <em>IEEE Transactions on Industrial Informatics</em>, vol. 16, no. 6, pp. 3963–3973, 2020. doi: 10.1109/TII.2019.2943669
         </li>
+
         <li>
-          B. Oswald-Tranta, “Induction Thermography for Surface Crack Detection and Depth Determination,”
-          <i>Applied Sciences</i>, vol. 8, no. 2, 257, 2018. doi: 10.3390/app8020257.
+          R. Wang, H. Malekmohammadi, Q. Yi, G. Y. Tian, S. Laureti, A. Samaei, and M. Ricci,
+          “Advanced detection and reconstruction of welding defects in irregular geometries using eddy current pulsed thermography,”
+          <em>NDT &amp; E International</em>, 2025, Art. no. 103398. doi: 10.1016/j.ndteint.2025.103398
         </li>
+
         <li>
-          U. Netzelmann, G. Walle, S. Lugin, A. Ehlen, S. Bessert, and B. Valeske, “Induction thermography: principle,
-          applications and first steps towards standardization,” <i>Quantitative InfraRed Thermography Journal</i>, 2016.
-          doi: 10.1080/17686733.2016.1145842.
+          G. Y. Tian, Y. Gao, K. Li, Y. Wang, B. Gao, and Y. He,
+          “Eddy Current Pulsed Thermography with Different Excitation Configurations for Metallic Material and Defect Characterization,”
+          <em>Sensors</em>, vol. 16, no. 6, 843, 2016. doi: 10.3390/s16060843
         </li>
+
         <li>
-          T. Worzewski, R. Krankenhagen, M. Doroshtnasir, M. Röllig, C. Maierhofer, and H. Steinfurth, “Thermographic
-          inspection of a wind turbine rotor blade segment utilizing natural conditions as excitation source, Part I: Solar
-          excitation for detecting deep structures in GFRP,” <i>Infrared Physics &amp; Technology</i>, vol. 76, pp. 756–766, 2016.
-          doi: 10.1016/j.infrared.2016.04.011.
+          C. Camerini, J. M. A. Rebello, L. Braga, R. Santos, T. Chady, G. Psuj, and G. Pereira,
+          “In-Line Inspection Tool with Eddy Current Instrumentation for Fatigue Crack Detection,”
+          <em>Sensors</em>, vol. 18, no. 7, 2161, 2018. doi: 10.3390/s18072161
         </li>
+
         <li>
-          T. Worzewski, R. Krankenhagen, and M. Doroshtnasir, “Thermographic
+          B. Oswald-Tranta,
+          “Inductive thermography – review of a non-destructive inspection technique for surface crack detection,”
+          <em>Quantitative Infrared Thermography Journal</em>, 2025. doi: 10.1080/17686733.2024.2448049
+        </li>
+
+        <li>
+          J. Liu, W. Huang, H. Lu, W. Liu, and Y. He,
+          “Eddy current pulsed thermography aided with inductive heating layer: quantitative evaluation of defects in non-conductive glass fibre reinforced polymer,”
+          <em>Composites Part B: Engineering</em>, vol. 301, 111517, 2024. doi: 10.1016/j.compositesb.2024.111517
+        </li>
+
+        <li>
+          H. M. Vasconcelos, P. J. Sousa, S. Dias, N. Viriato, T. Domingues, P. J. Tavares, and P. M. G. P. Moreira,
+          “UAV-Based Thermographic Inspection of Wind Turbine Blades for Structural Integrity Assessment: Preliminary Findings,”
+          <em>Procedia Structural Integrity</em>, vol. 68, pp. 795–801, 2025. doi: 10.1016/j.prostr.2025.06.132
+        </li>
+
+        <li>
+          “Wind turbine blade defect detection based on pulsed infrared thermography and improved U-Net,”
+          <em>Nondestructive Testing and Evaluation</em>, 2025. doi: 10.1080/10589759.2025.2501701
+        </li>
+      </ol>
+    </section>
+
+  </main>
+
+  <footer class="footer">
+    <div class="container">
+      © 2026 UK–Brazil ISPF scheme
+    </div>
+  </footer>
+</body>
+</html>
