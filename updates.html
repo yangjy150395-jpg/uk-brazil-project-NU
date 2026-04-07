@@ -3,8 +3,83 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Project Overview</title>
+  <title>Project Updates</title>
   <link rel="stylesheet" href="style.css" />
+  <style>
+    .page-head{
+      margin-bottom: 18px;
+    }
+    .page-head h1{
+      margin: 0 0 8px;
+      font-size: 30px;
+    }
+    .page-head p{
+      margin: 0;
+      line-height: 1.6;
+    }
+
+    .updates-wrap{
+      display: flex;
+      flex-direction: column;
+      gap: 16px;
+    }
+
+    .update-card{
+      background: var(--card);
+      border: 1px solid var(--line);
+      border-radius: 14px;
+      padding: 18px;
+    }
+
+    .update-meta{
+      margin-bottom: 8px;
+      font-size: 13px;
+      color: var(--muted);
+      letter-spacing: 0.2px;
+      text-transform: uppercase;
+    }
+
+    .update-card h2{
+      margin: 0 0 10px;
+      font-size: 22px;
+      line-height: 1.35;
+    }
+
+    .update-card p{
+      margin: 0 0 10px;
+      line-height: 1.7;
+    }
+
+    .update-card p:last-child{
+      margin-bottom: 0;
+    }
+
+    .update-card ul{
+      margin: 8px 0 0 20px;
+      padding: 0;
+      line-height: 1.7;
+    }
+
+    .update-card li{
+      margin-bottom: 6px;
+    }
+
+    .tag-row{
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      margin-top: 12px;
+    }
+
+    .tag{
+      display: inline-block;
+      padding: 4px 10px;
+      border: 1px solid var(--line);
+      border-radius: 999px;
+      font-size: 12px;
+      color: var(--muted);
+    }
+  </style>
 </head>
 <body>
   <header class="nav">
@@ -22,11 +97,69 @@
   </header>
 
   <main class="container">
-    <section class="card">
-      <h1>Project Overview</h1>
+    <section class="page-head">
+      <h1>Latest Updates</h1>
       <p class="muted">
-        This page introduces the project background, objectives, and work packages.
+        This page highlights recent project meetings, technical progress, experimental activities, and dissemination outcomes.
       </p>
+    </section>
+
+    <section class="updates-wrap">
+
+      <article class="update-card">
+        <div class="update-meta">Recent Progress</div>
+        <h2>Ongoing UK–Brazil project meetings and coordinated technical progress</h2>
+        <p>
+          The UK and Brazil groups have continued to hold regular project meetings to coordinate research activities and review progress across modelling, experimentation, and future dissemination plans.
+        </p>
+        <p>
+          On the UK side, progress has been made in numerical simulation of tensor direction mapping for wind turbine blades, with current work focusing on the representation of anisotropic directions on curved blade geometries.
+        </p>
+        <p>
+          On the Brazil side, a series of preliminary experiments and simulations has been carried out on existing wind turbine blades, providing an initial basis for subsequent validation and comparative analysis.
+        </p>
+        <div class="tag-row">
+          <span class="tag">Meetings</span>
+          <span class="tag">Simulation</span>
+          <span class="tag">WTB</span>
+          <span class="tag">Preliminary Experiments</span>
+        </div>
+      </article>
+
+      <article class="update-card">
+        <div class="update-meta">Conference</div>
+        <h2>Participation in ECNDT 2026 in Verona on 15 June</h2>
+        <p>
+          The project team will participate in the European Conference on Non-Destructive Testing (ECNDT), to be held in Verona on 15 June 2026. This will provide an opportunity to present recent research progress, exchange ideas with the wider NDT community, and strengthen international academic engagement.
+        </p>
+        <div class="tag-row">
+          <span class="tag">ECNDT 2026</span>
+          <span class="tag">Verona</span>
+          <span class="tag">Conference</span>
+        </div>
+      </article>
+
+      <article class="update-card">
+        <div class="update-meta">Publications</div>
+        <h2>Two papers accepted for publication</h2>
+        <p>
+          Two project-related papers have recently been accepted, marking an important dissemination milestone for the collaboration:
+        </p>
+        <ul>
+          <li><i>Lift-off Trajectory Analysis for Eddy Current Detection of Millimetre-Scale Cracks in Curved Geometries</i></li>
+          <li><i>EPH-iFNO: Self-Evolving Physics-Attention Heads with Fourier Neural Operators for Virtual-Wave Inversion</i></li>
+        </ul>
+        <p>
+          These accepted papers reflect recent advances in curved-geometry eddy current inspection and physics-informed operator learning for inversion problems.
+        </p>
+        <div class="tag-row">
+          <span class="tag">Accepted Papers</span>
+          <span class="tag">Eddy Current Testing</span>
+          <span class="tag">FNO</span>
+          <span class="tag">Dissemination</span>
+        </div>
+      </article>
+
     </section>
   </main>
 
