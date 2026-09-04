@@ -7,118 +7,54 @@
   <link rel="stylesheet" href="style.css" />
   <style>
     .faq-intro{
-      max-width: 900px;
-      line-height: 1.7;
-      color: var(--muted);
-      margin: 0;
-    }
-
-    .faq-grid{
-      display: grid;
-      grid-template-columns: repeat(2, minmax(0, 1fr));
-      gap: 14px;
-      margin-top: 14px;
-    }
-
-    .faq-card{
-      border: 1px solid var(--line);
-      border-radius: var(--radius);
-      padding: 18px;
-      background: #fff;
-      box-shadow: var(--shadow);
-    }
-
-    .faq-number{
-      display: inline-flex;
-      align-items: center;
-      justify-content: center;
-      min-width: 34px;
-      height: 34px;
-      padding: 0 10px;
-      border-radius: 999px;
-      background: #f1f5f9;
-      color: #334155;
-      font-size: 12px;
-      font-weight: 800;
-      margin-bottom: 10px;
-    }
-
-    .faq-card h2{
-      margin: 0 0 10px;
-      font-size: 19px;
-      line-height: 1.35;
-    }
-
-    .faq-card p{
+      max-width: 920px;
       margin: 0;
       color: var(--muted);
       line-height: 1.7;
     }
 
-    .faq-card p + p{
-      margin-top: 10px;
-    }
-
-    .process{
-      display: grid;
-      grid-template-columns: repeat(4, minmax(0, 1fr));
-      gap: 12px;
-      margin-top: 14px;
-    }
-
-    .process-step{
-      position: relative;
-      border: 1px solid var(--line);
-      border-radius: 16px;
-      background: #fff;
-      padding: 16px;
-      min-height: 150px;
-    }
-
-    .process-step strong{
-      display: block;
-      margin-bottom: 8px;
-      font-size: 15px;
-    }
-
-    .process-step p{
-      margin: 0;
-      color: var(--muted);
-      line-height: 1.55;
-      font-size: 13px;
-    }
-
-    .project-grid{
-      display: grid;
-      grid-template-columns: repeat(4, minmax(0, 1fr));
-      gap: 12px;
-      margin-top: 14px;
-    }
-
-    .project-card{
-      border: 1px solid var(--line);
-      border-radius: 16px;
-      padding: 16px;
-      background: #fff;
-    }
-
-    .project-card h3{
-      margin: 0 0 8px;
-      font-size: 15px;
-    }
-
-    .project-card p{
-      margin: 0;
-      color: var(--muted);
-      line-height: 1.55;
-      font-size: 13px;
-    }
-
-    .takeaways{
-      margin: 8px 0 0 18px;
+    .faq-list{
+      margin: 22px 0 0 22px;
       padding: 0;
+      max-width: 1050px;
+    }
+
+    .faq-list > li{
+      margin: 0 0 16px;
+      padding-left: 4px;
+    }
+
+    .faq-list details{
+      margin: 0;
+    }
+
+    .faq-list summary{
+      cursor: pointer;
+      font-size: 18px;
+      font-weight: 750;
+      line-height: 1.45;
+      color: var(--text);
+      padding: 4px 0;
+    }
+
+    .faq-list summary:hover{
+      color: #2563eb;
+    }
+
+    .faq-answer{
+      margin: 10px 0 2px;
+      padding-left: 2px;
+      max-width: 920px;
       color: var(--muted);
-      line-height: 1.75;
+      line-height: 1.7;
+    }
+
+    .faq-answer p{
+      margin: 0 0 9px;
+    }
+
+    .faq-answer p:last-child{
+      margin-bottom: 0;
     }
 
     .inline-link{
@@ -128,16 +64,10 @@
       text-underline-offset: 2px;
     }
 
-    @media (max-width: 1000px){
-      .faq-grid{ grid-template-columns: 1fr; }
-      .process{ grid-template-columns: repeat(2, minmax(0, 1fr)); }
-      .project-grid{ grid-template-columns: repeat(2, minmax(0, 1fr)); }
-    }
-
     @media (max-width: 650px){
-      .process,
-      .project-grid{ grid-template-columns: 1fr; }
       .hero h1{ font-size: 30px; }
+      .faq-list{ margin-left: 20px; }
+      .faq-list summary{ font-size: 17px; }
     }
   </style>
 </head>
@@ -160,164 +90,92 @@
     <section class="hero">
       <h1>Wind Turbine Blade Thermography: Key Questions</h1>
       <p class="sub">
-        A practical introduction to how thermography can reveal hidden damage in composite wind turbine blades, and why real blade geometry makes the inspection problem challenging.
+        Key questions about thermographic inspection of composite wind turbine blades, from subsurface defect detection to the effects of curvature and material anisotropy.
       </p>
     </section>
 
-    <section class="panel">
-      <div class="panel-head">
-        <h2>Why these questions matter</h2>
-      </div>
+    <section>
       <p class="faq-intro">
-        Wind turbine blades are large, curved composite structures that operate under cyclic loading and harsh environmental conditions. Many important defects develop below the surface, so inspection methods must do more than identify visible damage. Active thermography uses a controlled thermal stimulus and an infrared camera to observe how heat moves through the blade. Subsurface defects disturb that heat flow and can therefore create measurable thermal signatures. The questions below explain the basic physics, practical limitations, and research challenges behind this approach.
+        Click any question below to expand the answer.
       </p>
-    </section>
 
-    <section class="faq-grid" aria-label="Wind turbine blade thermography frequently asked questions">
-      <article class="faq-card">
-        <div class="faq-number">Q1</div>
-        <h2>What types of damage can occur in wind turbine blades?</h2>
-        <p>
-          Composite blades can develop delamination between laminate layers, adhesive or bond-line debonding, impact-related damage, cracks, voids, and other local discontinuities. Some of these defects can remain largely invisible at the surface while still affecting structural integrity.
-        </p>
-      </article>
+      <ul class="faq-list">
+        <li>
+          <details>
+            <summary>What types of damage can occur in wind turbine blades?</summary>
+            <div class="faq-answer">
+              <p>Composite blades can develop delamination between laminate layers, adhesive or bond-line debonding, impact-related damage, cracks, voids, and other local discontinuities. Some defects can remain largely invisible at the surface while still affecting structural integrity.</p>
+            </div>
+          </details>
+        </li>
 
-      <article class="faq-card">
-        <div class="faq-number">Q2</div>
-        <h2>How can thermography detect a defect that is below the surface?</h2>
-        <p>
-          In active thermography, the inspected region is heated in a controlled way and an infrared camera records the surface temperature as it changes with time. Heat normally diffuses through sound material in a characteristic way. A subsurface defect changes the local thermal path, so the temperature above or around the defect can evolve differently from neighbouring sound regions.
-        </p>
-        <p>
-          Detection therefore depends on the complete transient thermal response, not simply on whether one pixel looks hotter or colder in a single frame.
-        </p>
-      </article>
+        <li>
+          <details>
+            <summary>How can thermography detect a defect that is below the surface?</summary>
+            <div class="faq-answer">
+              <p>In active thermography, the inspected region is heated in a controlled way and an infrared camera records the surface temperature as it changes with time. Heat normally diffuses through sound material in a characteristic way. A subsurface defect changes the local thermal path, so the temperature above or around the defect can evolve differently from neighbouring sound regions.</p>
+              <p>Detection therefore depends on the transient thermal response rather than simply on whether one pixel looks hotter or colder in a single frame.</p>
+            </div>
+          </details>
+        </li>
 
-      <article class="faq-card">
-        <div class="faq-number">Q3</div>
-        <h2>What is the difference between passive and active thermography?</h2>
-        <p>
-          Passive thermography observes naturally occurring temperature differences, for example those created by operating or environmental conditions. Active thermography deliberately introduces an excitation, such as optical, electromagnetic, or another controlled heat source, and analyses the resulting thermal transient.
-        </p>
-        <p>
-          Active methods are particularly useful when repeatable inspection conditions and defect-sensitive thermal responses are required.
-        </p>
-      </article>
+        <li>
+          <details>
+            <summary>What is the difference between passive and active thermography?</summary>
+            <div class="faq-answer">
+              <p>Passive thermography observes naturally occurring temperature differences, for example those created by operating or environmental conditions. Active thermography deliberately introduces an excitation, such as optical or electromagnetic heating, and analyses the resulting thermal transient.</p>
+            </div>
+          </details>
+        </li>
 
-      <article class="faq-card">
-        <div class="faq-number">Q4</div>
-        <h2>Why are curved wind turbine blade surfaces difficult to inspect?</h2>
-        <p>
-          Blade curvature changes the distance and orientation between the surface, the excitation source, and the infrared camera. This can produce non-uniform heating, changes in apparent temperature, different viewing angles, and position-dependent measurement sensitivity. A thermal contrast caused by geometry can therefore resemble, hide, or distort the contrast caused by damage.
-        </p>
-      </article>
+        <li>
+          <details>
+            <summary>Why are curved wind turbine blade surfaces difficult to inspect?</summary>
+            <div class="faq-answer">
+              <p>Blade curvature changes the distance and orientation between the surface, the excitation source, and the infrared camera. This can produce non-uniform heating, changes in apparent temperature, different viewing angles, and position-dependent measurement sensitivity. A thermal contrast caused by geometry can therefore resemble, hide, or distort the contrast caused by damage.</p>
+            </div>
+          </details>
+        </li>
 
-      <article class="faq-card">
-        <div class="faq-number">Q5</div>
-        <h2>Why does fibre orientation matter in composite blades?</h2>
-        <p>
-          Composite laminates are anisotropic: heat and, in electrically conductive materials such as carbon-fibre reinforced polymer (CFRP), induced electrical current can travel differently along and across fibre directions. The stacking sequence and local fibre orientation therefore influence both the excitation field and the subsequent thermal response.
-        </p>
-        <p>
-          This means that two geometrically similar defects can produce different signatures when they are located in different laminate configurations.
-        </p>
-      </article>
+        <li>
+          <details>
+            <summary>Why does fibre orientation matter in composite blades?</summary>
+            <div class="faq-answer">
+              <p>Composite laminates are anisotropic: heat and, in electrically conductive materials such as carbon-fibre reinforced polymer (CFRP), induced electrical current can travel differently along and across fibre directions. The stacking sequence and local fibre orientation therefore influence both the excitation field and the subsequent thermal response.</p>
+              <p>As a result, geometrically similar defects can produce different thermal signatures in different laminate configurations.</p>
+            </div>
+          </details>
+        </li>
 
-      <article class="faq-card">
-        <div class="faq-number">Q6</div>
-        <h2>How deep can thermography detect a defect?</h2>
-        <p>
-          There is no single depth limit that applies to every blade. Detectability depends on the material, thermal diffusivity, defect size and depth, excitation energy and duration, camera sensitivity, surface condition, signal-to-noise ratio, and the processing method used.
-        </p>
-        <p>
-          Deeper defects generally produce weaker and more spatially diffuse thermal signatures, which is one reason why reconstruction and inversion methods are important for quantitative inspection.
-        </p>
-      </article>
+        <li>
+          <details>
+            <summary>How deep can thermography detect a defect?</summary>
+            <div class="faq-answer">
+              <p>There is no single depth limit that applies to every blade. Detectability depends on the material, thermal diffusivity, defect size and depth, excitation energy and duration, camera sensitivity, surface condition, signal-to-noise ratio, and the processing method used.</p>
+              <p>Deeper defects generally produce weaker and more spatially diffuse thermal signatures, which is one reason reconstruction and inversion methods are important for quantitative inspection.</p>
+            </div>
+          </details>
+        </li>
 
-      <article class="faq-card">
-        <div class="faq-number">Q7</div>
-        <h2>Where does Eddy Current Pulsed Thermography fit into blade inspection?</h2>
-        <p>
-          Eddy Current Pulsed Thermography (ECPT) combines electromagnetic induction with infrared imaging. In electrically conductive CFRP regions, induced currents generate transient Joule heating and damage can disturb both the current distribution and heat flow. Non-conductive glass-fibre reinforced polymer (GFRP) requires a different heating strategy or an additional conductive heating concept.
-        </p>
-        <p>
-          See <a class="inline-link" href="what-is-ecpt.html">What is ECPT?</a> for a more detailed introduction and references.
-        </p>
-      </article>
+        <li>
+          <details>
+            <summary>Where does Eddy Current Pulsed Thermography fit into blade inspection?</summary>
+            <div class="faq-answer">
+              <p>Eddy Current Pulsed Thermography (ECPT) combines electromagnetic induction with infrared imaging. In electrically conductive CFRP regions, induced currents generate transient Joule heating and damage can disturb both the current distribution and heat flow. Non-conductive glass-fibre reinforced polymer (GFRP) requires a different heating strategy or an additional conductive heating concept.</p>
+              <p>See <a class="inline-link" href="what-is-ecpt.html">What is ECPT?</a> for a more detailed introduction and references.</p>
+            </div>
+          </details>
+        </li>
 
-      <article class="faq-card">
-        <div class="faq-number">Q8</div>
-        <h2>Can thermography be used on real wind turbine blades?</h2>
-        <p>
-          Thermography is attractive for blade inspection because it is non-contact and can survey relatively large areas. Moving from laboratory coupons to real blades, however, introduces practical variations in curvature, access, surface emissivity, heating uniformity, environmental conditions, camera angle, and inspection distance.
-        </p>
-        <p>
-          Reliable field use therefore requires both appropriate excitation and analysis methods that can separate damage-related information from these measurement variations.
-        </p>
-      </article>
-    </section>
-
-    <section class="panel">
-      <div class="panel-head">
-        <h2>From measurement to interpretation</h2>
-        <p class="muted">A simplified active-thermography inspection workflow.</p>
-      </div>
-
-      <div class="process">
-        <div class="process-step">
-          <strong>1. Excite</strong>
-          <p>Apply a controlled thermal or electromagnetic stimulus to the blade surface.</p>
-        </div>
-        <div class="process-step">
-          <strong>2. Record</strong>
-          <p>Use an infrared camera to capture the surface-temperature evolution over time.</p>
-        </div>
-        <div class="process-step">
-          <strong>3. Reconstruct</strong>
-          <p>Process the thermal sequence to reduce diffusion, geometry, and measurement effects.</p>
-        </div>
-        <div class="process-step">
-          <strong>4. Assess</strong>
-          <p>Extract interpretable indicators for defect detection, localisation, and characterisation.</p>
-        </div>
-      </div>
-    </section>
-
-    <section class="panel">
-      <div class="panel-head">
-        <h2>How this project addresses these challenges</h2>
-        <p class="muted">Research directions linking blade physics to practical inspection.</p>
-      </div>
-
-      <div class="project-grid">
-        <div class="project-card">
-          <h3>Curved geometry</h3>
-          <p>Study how blade curvature changes excitation, thermal transport, and measured surface temperature.</p>
-        </div>
-        <div class="project-card">
-          <h3>Anisotropy and fibre direction</h3>
-          <p>Represent direction-dependent electrical and thermal behaviour in layered composite structures.</p>
-        </div>
-        <div class="project-card">
-          <h3>Improved excitation</h3>
-          <p>Develop excitation strategies that provide stronger, more repeatable, and more informative thermal responses.</p>
-        </div>
-        <div class="project-card">
-          <h3>Reconstruction and inversion</h3>
-          <p>Develop physics-aware data processing and learning methods to recover defect information from diffusive thermal measurements.</p>
-        </div>
-      </div>
-    </section>
-
-    <section class="panel">
-      <div class="panel-head">
-        <h2>Key takeaways</h2>
-      </div>
-      <ul class="takeaways">
-        <li>Thermography detects damage indirectly by measuring how defects alter transient heat flow.</li>
-        <li>Blade curvature and composite anisotropy can change the thermal signature even when the defect itself is unchanged.</li>
-        <li>There is no universal defect-depth limit: inspection performance depends on the complete measurement system and material configuration.</li>
-        <li>The project combines improved excitation with reconstruction and inversion to make thermal data more reliable on realistic blade geometries.</li>
+        <li>
+          <details>
+            <summary>Can thermography be used on real wind turbine blades?</summary>
+            <div class="faq-answer">
+              <p>Thermography is attractive for blade inspection because it is non-contact and can survey relatively large areas. Moving from laboratory coupons to real blades, however, introduces practical variations in curvature, access, surface emissivity, heating uniformity, environmental conditions, camera angle, and inspection distance.</p>
+              <p>Reliable field use therefore requires appropriate excitation and analysis methods that can separate damage-related information from measurement variations.</p>
+            </div>
+          </details>
+        </li>
       </ul>
     </section>
   </main>
