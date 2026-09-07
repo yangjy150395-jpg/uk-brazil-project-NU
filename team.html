@@ -80,6 +80,15 @@
       font-weight: 650;
     }
 
+    .profile-link{
+      display: inline-block;
+      margin-top: 10px;
+      color: #2563eb;
+      font-weight: 700;
+      text-decoration: underline;
+      text-underline-offset: 2px;
+    }
+
     /* Photo placeholder: uses background-image, so missing images do not show broken icons */
     .photo{
       width: 100%;
@@ -129,6 +138,14 @@
       background-size: cover;
       background-position: center;
     }
+
+    .photo.paul{
+      background-image:
+        linear-gradient(180deg, rgba(2,6,23,0.00) 0%, rgba(2,6,23,0.08) 100%),
+        url("https://research-information.bris.ac.uk/ws/files/289844835/IMG_7267_rotated.jpg");
+      background-size: cover;
+      background-position: center;
+    }
     
     .photo.oktay{
       background-image:
@@ -173,6 +190,7 @@
         <a href="about.html">Project</a>
         <a href="team.html">Team</a>
         <a href="platform.html">Facilities</a>
+        <a href="publications.html">Publications</a>
         <a href="updates.html">Updates</a>
         <a href="contact.html">Contact</a>
       </nav>
@@ -258,6 +276,31 @@
           </div>
       
           <div class="photo guiyun" aria-label="Guiyun Tian photo placeholder"></div>
+        </div>
+      </article>
+
+      <!-- Paul Wilcox -->
+      <article class="member-card">
+        <div class="member-grid">
+          <div>
+            <h2 class="member-name">Paul Wilcox</h2>
+            <p class="member-meta">Professor of Dynamics · Collaborator · University of Bristol</p>
+
+            <p class="member-text">
+              Prof. Paul Wilcox is Professor of Dynamics in the School of Electrical, Electronic and Mechanical Engineering at the University of Bristol. His research spans non-destructive evaluation and quantitative structural health monitoring, with particular expertise in ultrasonic inspection and sensing technologies. He previously served as Academic Director of the UK Research Centre for Non-Destructive Evaluation and is a co-founder of Inductosense Ltd. In this collaboration, he contributes senior expertise in inspection science, structural health monitoring, and the translation of sensing technologies to industrial applications.
+            </p>
+
+            <div class="member-tags">
+              <span class="tag">Ultrasonic NDE</span>
+              <span class="tag">Structural Health Monitoring</span>
+              <span class="tag">Inspection Science</span>
+              <span class="tag">Industrial Translation</span>
+            </div>
+
+            <a class="profile-link" href="https://www.bristol.ac.uk/people/person/Paul-Wilcox-2b9f9406-6335-46fb-81c7-89b1a02ac74a/" target="_blank" rel="noopener">University of Bristol profile</a>
+          </div>
+
+          <div class="photo paul" aria-label="Paul Wilcox photo"></div>
         </div>
       </article>
 
