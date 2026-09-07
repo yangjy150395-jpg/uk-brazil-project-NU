@@ -18,6 +18,29 @@ body{
   color: var(--text);
 }
 
+/* ---------- Partner university logos ---------- */
+body::before{
+  content: "";
+  display: block;
+  width: 100%;
+  height: 78px;
+  background-color: #fff;
+  background-image:
+    url("https://upload.wikimedia.org/wikipedia/commons/d/d7/Northumbria_University_Logo.png"),
+    url("https://portal.macae.ufrj.br/wp-content/uploads/2023/02/ufrj-horizontal-cor-rgb-telas.png"),
+    url("https://brandlogos.net/wp-content/uploads/2026/03/university-of-bristol-logo-1024x297.png");
+  background-repeat: no-repeat;
+  background-position:
+    calc(50% - 315px) center,
+    50% center,
+    calc(50% + 315px) center;
+  background-size:
+    235px auto,
+    155px auto,
+    215px auto;
+  border-bottom: 1px solid var(--line);
+}
+
 a{ color: inherit; text-decoration: none; }
 
 .container{
@@ -215,9 +238,37 @@ a{ color: inherit; text-decoration: none; }
   .info-grid{ grid-template-columns: 1fr; }
 }
 
+@media (max-width: 720px){
+  body::before{
+    height: 66px;
+    background-position:
+      calc(50% - 145px) center,
+      50% center,
+      calc(50% + 145px) center;
+    background-size:
+      135px auto,
+      92px auto,
+      125px auto;
+  }
+}
+
 @media (max-width: 650px){
   .tile-grid{ grid-template-columns: 1fr; }
   .tile{ height: 190px; }
+}
+
+@media (max-width: 440px){
+  body::before{
+    height: 58px;
+    background-position:
+      calc(50% - 105px) center,
+      50% center,
+      calc(50% + 105px) center;
+    background-size:
+      102px auto,
+      66px auto,
+      94px auto;
+  }
 }
 
 /* ---------- Contact page helpers ---------- */
