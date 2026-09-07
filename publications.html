@@ -1,0 +1,194 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Publications | UK–Brazil Project (NU)</title>
+  <link rel="stylesheet" href="style.css" />
+  <style>
+    .pub-head{
+      margin: 16px 0 18px;
+    }
+    .pub-head h1{
+      margin: 0 0 8px;
+      font-size: 30px;
+      letter-spacing: -0.2px;
+    }
+    .pub-head p{
+      margin: 0;
+      max-width: 900px;
+      color: var(--muted);
+      line-height: 1.6;
+    }
+
+    .pub-list{
+      border-top: 1px solid var(--line);
+    }
+
+    .pub-entry{
+      display: grid;
+      grid-template-columns: 48px minmax(0, 1fr);
+      gap: 14px;
+      padding: 22px 0;
+      border-bottom: 1px solid var(--line);
+    }
+
+    .pub-number{
+      color: var(--muted);
+      font-size: 14px;
+      font-weight: 700;
+      padding-top: 4px;
+    }
+
+    .pub-title{
+      margin: 0 0 7px;
+      font-size: 21px;
+      line-height: 1.35;
+      font-weight: 800;
+    }
+
+    .pub-authors{
+      margin: 0 0 5px;
+      line-height: 1.55;
+      color: #334155;
+    }
+
+    .pub-meta{
+      margin: 0 0 10px;
+      color: var(--muted);
+      font-size: 14px;
+      line-height: 1.5;
+    }
+
+    .pub-status{
+      display: inline-block;
+      margin-right: 8px;
+      padding: 2px 8px;
+      border: 1px solid var(--line);
+      border-radius: 999px;
+      font-size: 12px;
+      font-weight: 750;
+      color: #475569;
+      background: #fff;
+    }
+
+    .pub-links{
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      margin: 9px 0 12px;
+    }
+
+    .pub-links a{
+      color: #9b1c1c;
+      text-decoration: none;
+      font-weight: 750;
+      font-size: 14px;
+    }
+
+    .pub-links a:hover{
+      text-decoration: underline;
+    }
+
+    .pub-abstract{
+      margin: 0;
+      max-width: 1000px;
+      line-height: 1.68;
+      color: #334155;
+      font-size: 14px;
+    }
+
+    .pub-abstract strong{
+      color: #0f172a;
+    }
+
+    @media (max-width: 650px){
+      .pub-entry{
+        grid-template-columns: 1fr;
+        gap: 4px;
+      }
+      .pub-number{
+        padding-top: 0;
+      }
+      .pub-title{
+        font-size: 19px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header class="nav">
+    <div class="container nav-inner">
+      <a class="brand" href="index.html">UK–Brazil Project (NU)</a>
+      <nav class="menu">
+        <a href="about.html">Project</a>
+        <a href="team.html">Team</a>
+        <a href="platform.html">Facilities</a>
+        <a href="publications.html">Publications</a>
+        <a href="updates.html">Updates</a>
+        <a href="contact.html">Contact</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="container">
+    <section class="pub-head">
+      <h1>Publications</h1>
+      <p>
+        Project-related manuscripts and publications are listed below in a compact preprint-style format. Direct document links are provided where an author manuscript is available.
+      </p>
+    </section>
+
+    <section class="pub-list" aria-label="Project publications">
+
+      <article class="pub-entry">
+        <div class="pub-number">[1]</div>
+        <div>
+          <h2 class="pub-title">Lift-Off-Robust Eddy-Current Pulsed Thermography Using an LCC Resonant Drive</h2>
+          <p class="pub-authors">Yahui Jia, Ling Wen, Chen Li, Zhongchi Zhang, Jingyuan Yang, Gui-Yun Tian, and Qiuji Yi</p>
+          <p class="pub-meta"><span class="pub-status">Under review</span> IEEE Transactions on Instrumentation and Measurement</p>
+          <div class="pub-links">
+            <a href="https://drive.google.com/file/d/1ZQGR-6X71vaK9Hj0rMH5T-Uj7u8AsuOS/view?usp=drivesdk" target="_blank" rel="noopener">[PDF]</a>
+          </div>
+          <p class="pub-abstract"><strong>Abstract:</strong> Eddy-current pulsed thermography provides full-field inspection of conductive structures, but probe lift-off weakens coil-specimen coupling and the resulting thermal response before image acquisition. This work treats lift-off compensation as an excitation-hardware problem and introduces an LCC resonant network operated at fixed frequency to preserve specimen-side heating as lift-off increases. Steel-specimen experiments over 0–20 mm lift-off demonstrate substantially improved thermal-response retention and defect signal-to-noise ratio compared with the fixed-drive baseline.</p>
+        </div>
+      </article>
+
+      <article class="pub-entry">
+        <div class="pub-number">[2]</div>
+        <div>
+          <h2 class="pub-title">Embedded Inductive Sensing and Fourier Neural-Operator Global Curvature Estimation in Heliostat Mirrors</h2>
+          <p class="pub-authors">Xiaolong Lu, Ruonan Li, Jingyuan Yang, Zongwen Wang, Yunhua Tan, Guiyun Tian, Wai Lok Woo, and Qiuji Yi</p>
+          <p class="pub-meta"><span class="pub-status">Under review</span> IEEE Transactions on Industrial Informatics</p>
+          <div class="pub-links">
+            <a href="https://drive.google.com/file/d/1PG5p_465AX2WlwxOuIh_02vUGbwln06K/view?usp=drivesdk" target="_blank" rel="noopener">[PDF + Appendix]</a>
+          </div>
+          <p class="pub-abstract"><strong>Abstract:</strong> This work presents an embedded inductive sensing and operator-learning framework for heliostat mirror geometry monitoring from sparse support-point measurements. Inductance-to-digital-converter eddy-current sensors provide digitally addressable gap measurements, which are mapped to a fixed grid and processed by a curvature-conditioned Fourier neural operator. The framework combines global spectral modelling, local feature transformation and curvature-aware conditioning to estimate mirror-scale geometry, with validation against structured-light measurements. The linked preprint combines the main manuscript and appendix in a single document.</p>
+        </div>
+      </article>
+
+      <article class="pub-entry">
+        <div class="pub-number">[3]</div>
+        <div>
+          <h2 class="pub-title">Thermography-Tomographic Imaging: Integration of Pulse Compression Thermography and Virtual Wave for Physics-Based Learning</h2>
+          <p class="pub-authors">Dong Wang, Marco Ricci, Stefano Laureti, Xiaolong Lu, Rocco Zito, Stefano Sfarra, Peter Burgholzer, Guiyun Tian, Wai Lok Woo, and Qiuji Yi</p>
+          <p class="pub-meta"><span class="pub-status">Published</span> IEEE Transactions on Industrial Informatics, 22(8), 7313–7324, 2026</p>
+          <div class="pub-links">
+            <a href="https://doi.org/10.1109/TII.2026.3684984" target="_blank" rel="noopener">[DOI]</a>
+            <a href="https://ieeexplore.ieee.org/document/11500568/" target="_blank" rel="noopener">[Publisher]</a>
+            <a href="https://researchportal.northumbria.ac.uk/en/publications/thermography-tomographic-imaging-integration-of-pulse-compression/" target="_blank" rel="noopener">[Research Portal]</a>
+          </div>
+          <p class="pub-abstract"><strong>Abstract:</strong> The study integrates pulse-compression thermography with the virtual-wave transformation to address depth-dependent blurring in infrared thermographic inspection. Thermal responses are analysed before and after virtual-wave transformation, showing improved signal-to-noise behaviour and stronger linearity for defect characterisation. A deep spatio-temporal fusion network is then trained to reproduce the virtual-wave transformation, enabling efficient and physics-guided tomographic reconstruction.</p>
+        </div>
+      </article>
+
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container">
+      © 2026 UK–Brazil Project · Northumbria University
+    </div>
+  </footer>
+</body>
+</html>
