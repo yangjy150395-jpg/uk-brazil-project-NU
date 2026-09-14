@@ -5,28 +5,166 @@
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Team Members | UK–Brazil Project (NU)</title>
   <link rel="stylesheet" href="style.css" />
+
+  <!-- Page-specific layout (safe to keep here so you do not need to touch style.css) -->
   <style>
-    .page-head{ margin: 16px 0 10px; }
-    .page-head h1{ margin: 0 0 8px; font-size: 30px; letter-spacing: -0.2px; }
-    .page-head p{ margin: 0; color: var(--muted); line-height: 1.5; }
-    .team-wrap{ margin-top: 16px; display: flex; flex-direction: column; gap: 14px; }
-    .member-card{ border: 1px solid var(--line); border-radius: 18px; background: #fff; box-shadow: var(--shadow); padding: 16px; }
-    .member-grid{ display: grid; grid-template-columns: 1.35fr 0.65fr; gap: 16px; align-items: start; }
-    .member-name{ margin: 0 0 6px; font-size: 20px; font-weight: 850; }
-    .member-meta{ margin: 0 0 10px; color: var(--muted); font-weight: 650; }
-    .member-text{ margin: 0; line-height: 1.6; color: #0f172a; }
-    .member-tags{ margin-top: 12px; display: flex; flex-wrap: wrap; gap: 8px; }
-    .tag{ display: inline-block; border: 1px solid var(--line); padding: 6px 10px; border-radius: 999px; font-size: 12px; color: var(--muted); background: #fff; font-weight: 650; }
-    .photo{ width: 100%; min-height: 200px; border-radius: 16px; border: 1px solid var(--line); overflow: hidden; background: linear-gradient(120deg, rgba(37,99,235,0.14), rgba(16,185,129,0.10), rgba(245,158,11,0.10)); position: relative; }
-    .photo::after{ position: absolute; left: 12px; bottom: 10px; font-size: 12px; color: rgba(15,23,42,0.55); background: rgba(255,255,255,0.75); padding: 6px 10px; border-radius: 999px; border: 1px solid rgba(226,232,240,0.9); backdrop-filter: blur(6px); }
-    .photo.qiuji{ background-image: linear-gradient(180deg, rgba(2,6,23,0.00) 0%, rgba(2,6,23,0.08) 100%), url("pic/qiuji.jpg"); background-size: cover; background-position: center; }
-    .photo.cesar{ background-image: linear-gradient(180deg, rgba(2,6,23,0.00) 0%, rgba(2,6,23,0.08) 100%), url("pic/cesar.jpg"); background-size: cover; background-position: center; }
-    .photo.guiyun{ background-image: linear-gradient(180deg, rgba(2,6,23,0.00) 0%, rgba(2,6,23,0.08) 100%), url("pic/guiyun.jpg"); background-size: cover; background-position: center; }
-    .photo.paul{ background-image: linear-gradient(180deg, rgba(2,6,23,0.00) 0%, rgba(2,6,23,0.08) 100%), url("https://research-information.bris.ac.uk/ws/files/289844835/IMG_7267_rotated.jpg"); background-size: cover; background-position: center; }
-    .photo.jingyuan{ background-image: linear-gradient(180deg, rgba(2,6,23,0.00) 0%, rgba(2,6,23,0.08) 100%), url("pic/jingyuan.jpg"); background-size: cover; background-position: center; }
-    @media (max-width: 900px){ .member-grid{ grid-template-columns: 1fr; } .photo{ min-height: 220px; } }
+    .page-head{
+      margin: 16px 0 10px;
+    }
+    .page-head h1{
+      margin: 0 0 8px;
+      font-size: 30px;
+      letter-spacing: -0.2px;
+    }
+    .page-head p{
+      margin: 0;
+      color: var(--muted);
+      line-height: 1.5;
+    }
+
+    .team-wrap{
+      margin-top: 16px;
+      display: flex;
+      flex-direction: column;
+      gap: 14px;
+    }
+
+    .member-card{
+      border: 1px solid var(--line);
+      border-radius: 18px;
+      background: #fff;
+      box-shadow: var(--shadow);
+      padding: 16px;
+    }
+
+    .member-grid{
+      display: grid;
+      grid-template-columns: 1.35fr 0.65fr; /* text left, image right */
+      gap: 16px;
+      align-items: start;
+    }
+
+    .member-name{
+      margin: 0 0 6px;
+      font-size: 20px;
+      font-weight: 850;
+    }
+
+    .member-meta{
+      margin: 0 0 10px;
+      color: var(--muted);
+      font-weight: 650;
+    }
+
+    .member-text{
+      margin: 0;
+      line-height: 1.6;
+      color: #0f172a;
+    }
+
+    .member-tags{
+      margin-top: 12px;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+    }
+
+    .tag{
+      display: inline-block;
+      border: 1px solid var(--line);
+      padding: 6px 10px;
+      border-radius: 999px;
+      font-size: 12px;
+      color: var(--muted);
+      background: #fff;
+      font-weight: 650;
+    }
+
+    /* Photo placeholder: uses background-image, so missing images do not show broken icons */
+    .photo{
+      width: 100%;
+      min-height: 200px;
+      border-radius: 16px;
+      border: 1px solid var(--line);
+      overflow: hidden;
+      background:
+        linear-gradient(120deg, rgba(37,99,235,0.14), rgba(16,185,129,0.10), rgba(245,158,11,0.10));
+      position: relative;
+    }
+
+    .photo::after{
+      position: absolute;
+      left: 12px;
+      bottom: 10px;
+      font-size: 12px;
+      color: rgba(15,23,42,0.55);
+      background: rgba(255,255,255,0.75);
+      padding: 6px 10px;
+      border-radius: 999px;
+      border: 1px solid rgba(226,232,240,0.9);
+      backdrop-filter: blur(6px);
+    }
+
+    /* When you upload images to these paths, they will appear automatically */
+    .photo.qiuji{
+      background-image:
+        linear-gradient(180deg, rgba(2,6,23,0.00) 0%, rgba(2,6,23,0.08) 100%),
+        url("pic/qiuji.jpg");
+      background-size: cover;
+      background-position: center;
+    }
+    
+    .photo.cesar{
+      background-image:
+        linear-gradient(180deg, rgba(2,6,23,0.00) 0%, rgba(2,6,23,0.08) 100%),
+        url("pic/cesar.jpg");
+      background-size: cover;
+      background-position: center;
+    }
+
+    .photo.guiyun{
+      background-image:
+        linear-gradient(180deg, rgba(2,6,23,0.00) 0%, rgba(2,6,23,0.08) 100%),
+        url("pic/guiyun.jpg");
+      background-size: cover;
+      background-position: center;
+    }
+
+    .photo.paul{
+      background-image:
+        linear-gradient(180deg, rgba(2,6,23,0.00) 0%, rgba(2,6,23,0.08) 100%),
+        url("https://research-information.bris.ac.uk/ws/files/289844835/IMG_7267_rotated.jpg");
+      background-size: cover;
+      background-position: center;
+    }
+    
+    .photo.oktay{
+      background-image:
+        linear-gradient(180deg, rgba(2,6,23,0.00) 0%, rgba(2,6,23,0.08) 100%),
+        url("pic/oktay.jpg");
+      background-size: cover;
+      background-position: center;
+    }
+    
+    .photo.jingyuan{
+      background-image:
+        linear-gradient(180deg, rgba(2,6,23,0.00) 0%, rgba(2,6,23,0.08) 100%),
+        url("pic/jingyuan.jpg");
+      background-size: cover;
+      background-position: center;
+    }
+
+    @media (max-width: 900px){
+      .member-grid{
+        grid-template-columns: 1fr;
+      }
+      .photo{
+        min-height: 220px;
+      }
+    }
   </style>
 </head>
+
 <body>
   <header class="nav">
     <div class="container nav-inner">
@@ -45,16 +183,25 @@
   <main class="container">
     <section class="page-head">
       <h1>Team Members</h1>
-      <p>This page introduces the core team members and their roles in the UK–Brazil collaboration.</p>
+      <p>
+        This page introduces the core team members and their roles in the UK–Brazil collaboration.
+      </p>
     </section>
 
     <section class="team-wrap">
+
+      <!-- Qiuji -->
       <article class="member-card">
         <div class="member-grid">
           <div>
             <h2 class="member-name">Qiuji Yi</h2>
             <p class="member-meta">Assistant Professor (UK Principal Investigator) · Northumbria University</p>
-            <p class="member-text">Dr Qiuji Yi is an Assistant Professor at Northumbria University, United Kingdom. His work focuses on sensing and non-destructive evaluation for engineering systems, combining advanced signal processing with data-driven modelling and experimental validation. Within this project, he leads the UK team and oversees the overall research direction, methodology development, and coordination with the Brazil partner.</p>
+
+            <p class="member-text">
+              Dr Qiuji Yi is an Assistant Professor at Northumbria University, United Kingdom. His work focuses on sensing and non-destructive evaluation for engineering systems, combining advanced signal processing with data-driven modelling and experimental validation.
+              Within this project, he leads the UK team and oversees the overall research direction, methodology development, and coordination with the Brazil partner.
+            </p>
+
             <div class="member-tags">
               <span class="tag">Non-Destructive Testing</span>
               <span class="tag">Sensing & Data Processing</span>
@@ -62,16 +209,23 @@
               <span class="tag">Project Coordination</span>
             </div>
           </div>
-          <div class="photo qiuji" aria-label="Qiuji Yi photo"></div>
+
+          <div class="photo qiuji" aria-label="Qiuji Yi photo placeholder"></div>
         </div>
       </article>
 
+      <!-- Cesar -->
       <article class="member-card">
         <div class="member-grid">
           <div>
             <h2 class="member-name">Cesar Camerini</h2>
             <p class="member-meta">Professor (Brazil Principal Investigator)</p>
-            <p class="member-text">Prof. Cesar Camerini is the Brazil Principal Investigator and leads the experimental activities on the Brazil side. His research profile is strongly practice-oriented, with extensive experience in laboratory implementation, instrumentation, and the delivery of experimentally validated engineering solutions. In this collaboration, he contributes to experimental design, platform setup, and cross-validation between modelling and measured data.</p>
+
+            <p class="member-text">
+              Prof. Cesar Camerini is the Brazil Principal Investigator and leads the experimental activities on the Brazil side. His research profile is strongly practice-oriented, with extensive experience in laboratory implementation, instrumentation, and the delivery of experimentally validated engineering solutions.
+              In this collaboration, he contributes to experimental design, platform setup, and cross-validation between modelling and measured data.
+            </p>
+
             <div class="member-tags">
               <span class="tag">Experimental Development</span>
               <span class="tag">Instrumentation</span>
@@ -79,16 +233,23 @@
               <span class="tag">Project Coordination</span>
             </div>
           </div>
-          <div class="photo cesar" aria-label="Cesar Camerini photo"></div>
+
+          <div class="photo cesar" aria-label="Cesar Camerini photo placeholder"></div>
         </div>
       </article>
 
+      <!-- Guiyun Tian -->
       <article class="member-card">
         <div class="member-grid">
           <div>
             <h2 class="member-name">Guiyun Tian</h2>
             <p class="member-meta">Professor · Collaborator · Chongqing University of Technology</p>
-            <p class="member-text">Prof. Gui Yun Tian is a Distinguished Professor at Chongqing University of Technology, China, and an internationally recognised expert in electromagnetic non-destructive testing and sensing systems. His work has made long-standing contributions to pulsed eddy current methods, eddy current pulsed thermography, and related multi-physics inspection technologies, spanning modelling, sensor and array design, and experimental validation. In this project, he contributes as a senior collaborator, providing strategic guidance and technical expertise in advanced sensing and NDT methodologies, and supporting experimental validation and interpretation across partners.</p>
+      
+            <p class="member-text">
+              Prof. Gui Yun Tian is a Distinguished Professor at Chongqing University of Technology, China, and an internationally recognised expert in electromagnetic non-destructive testing and sensing systems. His work has made long-standing contributions to pulsed eddy current methods, eddy current pulsed thermography, and related multi-physics inspection technologies, spanning modelling, sensor and array design, and experimental validation.
+              In this project, he contributes as a senior collaborator, providing strategic guidance and technical expertise in advanced sensing and NDT methodologies, and supporting experimental validation and interpretation across partners.
+            </p>
+
             <div class="member-tags">
               <span class="tag">Sensor Technologies</span>
               <span class="tag">Electromagnetic NDT</span>
@@ -96,16 +257,22 @@
               <span class="tag">Strategic Guidance</span>
             </div>
           </div>
-          <div class="photo guiyun" aria-label="Guiyun Tian photo"></div>
+      
+          <div class="photo guiyun" aria-label="Guiyun Tian photo placeholder"></div>
         </div>
       </article>
 
+      <!-- Paul Wilcox -->
       <article class="member-card">
         <div class="member-grid">
           <div>
             <h2 class="member-name">Paul Wilcox</h2>
             <p class="member-meta">Professor · Collaborator for ICA Enhancement Funding · University of Bristol</p>
-            <p class="member-text">Prof. Paul Wilcox is Professor of Dynamics in the School of Electrical, Electronic and Mechanical Engineering at the University of Bristol. His research spans non-destructive evaluation and quantitative structural health monitoring, with particular expertise in ultrasonic inspection and sensing technologies. He previously served as Academic Director of the UK Research Centre for Non-Destructive Evaluation and is a co-founder of Inductosense Ltd. In the ICA Enhancement Funding project, he will act as a senior academic mentor, advising on composite non-destructive testing, data-driven evaluation, inverse problem methodology, and total focusing method imaging. He will also support the Bristol-hosted secondment and independent cross-modality validation.</p>
+
+            <p class="member-text">
+              Prof. Paul Wilcox is Professor of Dynamics in the School of Electrical, Electronic and Mechanical Engineering at the University of Bristol. His research spans non-destructive evaluation and quantitative structural health monitoring, with particular expertise in ultrasonic inspection and sensing technologies. He previously served as Academic Director of the UK Research Centre for Non-Destructive Evaluation and is a co-founder of Inductosense Ltd. In the ICA Enhancement Funding project, he will act as a senior academic mentor, advising on composite non-destructive testing, data-driven evaluation, inverse problem methodology, and total focusing method imaging. He will also support the Bristol-hosted secondment and independent cross-modality validation.
+            </p>
+
             <div class="member-tags">
               <span class="tag">Ultrasonic NDE</span>
               <span class="tag">Structural Health Monitoring</span>
@@ -113,16 +280,48 @@
               <span class="tag">Industrial Translation</span>
             </div>
           </div>
+
           <div class="photo paul" aria-label="Paul Wilcox photo"></div>
         </div>
       </article>
 
+      <!--
+      Oktay
+      <article class="member-card">
+        <div class="member-grid">
+          <div>
+            <h2 class="member-name">Oktay Çetinkaya</h2>
+            <p class="member-meta">Senior Lecturer · Collaborator · Newcastle University</p>
+            <p class="member-text">
+              Dr Oktay Çetinkaya is a Senior Lecturer in the School of Engineering at Newcastle University, United Kingdom. His research focuses on non-destructive testing, sensing technologies, and experimental diagnostics for complex engineering systems, with particular emphasis on electromagnetic inspection, thermography, and multi-physics measurement techniques.
+              He has extensive experience in the design and implementation of experimental platforms, sensor systems, and laboratory-based validation studies, bridging fundamental research with practical engineering applications.
+              In this project, he contributes as a collaborator by providing experimental facilities, technical expertise in measurement systems, and support for experimental validation and data interpretation.
+            </p>
+            <div class="member-tags">
+              <span class="tag">Electromagnetic NDT</span>
+              <span class="tag">Experimental Diagnostics</span>
+              <span class="tag">Laboratory Facilities</span>
+              <span class="tag">Collaboration</span>
+            </div>
+          </div>
+          
+          <div class="photo oktay" aria-label="Oktay Çetinkaya photo placeholder"></div>
+        </div>
+      </article>
+      -->
+
+      <!-- Jingyuan -->
       <article class="member-card">
         <div class="member-grid">
           <div>
             <h2 class="member-name">Jingyuan Yang</h2>
             <p class="member-meta">Research Associate · Northumbria University</p>
-            <p class="member-text">Dr Jingyuan Yang is a Research Associate at Northumbria University. He received a PhD in Mechanical Engineering from the University of Birmingham, with research centred on electromagnetic non-destructive testing for infrastructure and engineering components. His current work emphasises multi-physics modelling and experimental implementation, including COMSOL-based simulation, MATLAB data analysis, and the development of practical inspection workflows. In this project, he supports numerical modelling, experimental execution, and data interpretation, bridging simulation and measurements across both partners.</p>
+
+            <p class="member-text">
+              Dr Jingyuan Yang is a Research Associate at Northumbria University. He received a PhD in Mechanical Engineering from the University of Birmingham, with research centred on electromagnetic non-destructive testing for infrastructure and engineering components.
+              His current work emphasises multi-physics modelling and experimental implementation, including COMSOL-based simulation, MATLAB data analysis, and the development of practical inspection workflows. In this project, he supports numerical modelling, experimental execution, and data interpretation, bridging simulation and measurements across both partners.
+            </p>
+
             <div class="member-tags">
               <span class="tag">Simulation Modelling</span>
               <span class="tag">Data Analysis</span>
@@ -130,14 +329,18 @@
               <span class="tag">Experiment Implementation</span>
             </div>
           </div>
-          <div class="photo jingyuan" aria-label="Jingyuan Yang photo"></div>
+
+          <div class="photo jingyuan" aria-label="Jingyuan Yang photo placeholder"></div>
         </div>
       </article>
+
     </section>
   </main>
 
   <footer class="footer">
-    <div class="container">© 2026 UK–Brazil Project · Northumbria University</div>
+    <div class="container">
+      © 2026 UK–Brazil Project · Northumbria University
+    </div>
   </footer>
 </body>
 </html>
