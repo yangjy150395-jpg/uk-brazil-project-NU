@@ -5,8 +5,33 @@
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Project Summary · UK–Brazil Project (NU)</title>
   <link rel="stylesheet" href="style.css" />
+  <style>
+    .project-title{
+      margin: 22px 0 12px;
+      font-size: 24px;
+      line-height: 1.4;
+      font-weight: 800;
+      letter-spacing: -0.2px;
+      color: var(--text);
+    }
+    .project-title:first-of-type{
+      margin-top: 8px;
+    }
+    .prose{ line-height: 1.65; color: #0f172a; }
+    .prose p{ margin: 10px 0; color: #334155; }
+    .figure{ margin: 14px 0; border: 1px solid #e2e8f0; border-radius: 16px; overflow: hidden; background:#fff; }
+    .figure img{ width: 100%; display: block; }
+    .figure figcaption{ padding: 10px 12px; font-size: 12.5px; color: #475569; border-top: 1px solid #e2e8f0; }
+    .refs{ margin-left: 18px; }
+    .refs li{ margin: 8px 0; }
+    sup{ font-size: 0.75em; }
+    .role-list{ margin: 10px 0 0 18px; color: #334155; line-height: 1.65; }
+    .role-list li{ margin: 10px 0; }
+    @media (max-width: 650px){
+      .project-title{ font-size: 21px; }
+    }
+  </style>
 </head>
-
 <body>
   <header class="nav">
     <div class="container nav-inner">
@@ -23,13 +48,13 @@
   </header>
 
   <main class="container">
-    <!-- Page heading -->
     <section class="hero">
       <h1>Project Summary</h1>
-      <p class="sub">Thermographic reconstruction and inversion for wind turbine blades</p>
     </section>
 
-    <!-- ================= Project Introduction ================= -->
+    <!-- ================= Project 1 ================= -->
+    <h2 class="project-title">Thermographic Reconstruction and Inversion for Wind Turbine Blades to Advance Renewable Energy in Brazil</h2>
+
     <section class="panel">
       <div class="panel-head">
         <h2>Project Introduction</h2>
@@ -43,30 +68,19 @@
         </p>
 
         <p>
-          <strong>Northumbria University (UK)</strong> coordinates the overall technical delivery and integration, leading the development of thermography-based inspection capability for curved composite structures and the associated reconstruction and interpretation workflow. Northumbria also drives training and knowledge exchange for early-career researchers across the programme.        
+          <strong>Northumbria University (UK)</strong> coordinates the overall technical delivery and integration, leading the development of thermography-based inspection capability for curved composite structures and the associated reconstruction and interpretation workflow. Northumbria also drives training and knowledge exchange for early-career researchers across the programme.
         </p>
-
 
         <p>
-        <strong>Federal University of Rio de Janeiro (Brazil)</strong> leads Brazil-side experimental development and
-            application-oriented validation, including heat-transfer modelling support and practical inspection trials on
-            relevant blade components and curved industrial structures. UFRJ also enables local engagement and pathways for
-            adoption within Brazilian wind-energy contexts.        
+          <strong>Federal University of Rio de Janeiro (Brazil)</strong> leads Brazil-side experimental development and application-oriented validation, including heat-transfer modelling support and practical inspection trials on relevant blade components and curved industrial structures. UFRJ also enables local engagement and pathways for adoption within Brazilian wind-energy contexts.
         </p>
-        
+
         <p>
-        <strong>Newcastle University (UK)</strong> contributes specialist expertise in electromagnetic NDT and thermographic
-            data processing, supporting advanced excitation concepts and robust reconstruction approaches for complex geometries.
-            Newcastle also supports dissemination activities, including joint seminars and workshops on thermal NDT and AI-enabled
-            data interpretation.
+          <strong>Newcastle University (UK)</strong> contributes specialist expertise in electromagnetic NDT and thermographic data processing, supporting advanced excitation concepts and robust reconstruction approaches for complex geometries. Newcastle also supports dissemination activities, including joint seminars and workshops on thermal NDT and AI-enabled data interpretation.
         </p>
-
-
-
       </div>
     </section>
 
-    <!-- ================= Overview ================= -->
     <section class="panel" style="margin-top:16px;">
       <div class="panel-head">
         <h2>Overview</h2>
@@ -75,38 +89,24 @@
 
       <div class="prose">
         <p>
-          Brazil is expanding wind energy as part of its long-term decarbonisation pathway, and wind turbine blades
-          (WTBs) are critical assets whose integrity directly affects safety and operational efficiency. Thermography
-          is a widely used non-destructive evaluation (NDE) technique for WTB inspection: a controlled heat stimulus
-          is applied and the resulting surface temperature evolution is monitored to infer subsurface anomalies that
-          alter thermal transport behaviour <sup>[1,2]</sup>.
+          Brazil is expanding wind energy as part of its long-term decarbonisation pathway, and wind turbine blades (WTBs) are critical assets whose integrity directly affects safety and operational efficiency. Thermography is a widely used non-destructive evaluation (NDE) technique for WTB inspection: a controlled heat stimulus is applied and the resulting surface temperature evolution is monitored to infer subsurface anomalies that alter thermal transport behaviour <sup>[1,2]</sup>.
         </p>
 
         <p>
-          In real blades, conventional thermographic inspection faces key challenges. First, complex curved geometry
-          (especially corners and edges) can cause non-uniform heating and shadowing effects, reducing the reliability
-          of defect characterisation <sup>[1,2]</sup>. Second, accurate interpretation requires robust forward heat-transfer
-          modelling, which becomes computationally demanding and error-prone in complex geometries and for anisotropic
-          composite materials <sup>[3]</sup>. Third, many inversion approaches rely on simplified heat-transfer assumptions;
-          their accuracy can degrade when heat flow is influenced by complex geometries, heterogeneous materials, and
-          varying boundary conditions <sup>[4]</sup>.
+          In real blades, conventional thermographic inspection faces key challenges. First, complex curved geometry, especially corners and edges, can cause non-uniform heating and shadowing effects, reducing the reliability of defect characterisation <sup>[1,2]</sup>. Second, accurate interpretation requires robust forward heat-transfer modelling, which becomes computationally demanding and error-prone in complex geometries and for anisotropic composite materials <sup>[3]</sup>. Third, many inversion approaches rely on simplified heat-transfer assumptions; their accuracy can degrade when heat flow is influenced by complex geometries, heterogeneous materials, and varying boundary conditions <sup>[4]</sup>.
         </p>
 
         <p>
-          Figure 1 provides a high-level view of the project context and the overall inspection-to-interpretation workflow
-          for curved composite blades, motivating the need for geometry-aware thermography reconstruction and inversion.
+          Figure 1 provides a high-level view of the project context and the overall inspection-to-interpretation workflow for curved composite blades, motivating the need for geometry-aware thermography reconstruction and inversion.
         </p>
 
-        <!-- IMAGE PLACEHOLDER: Figure 1 -->
         <figure class="figure">
-          <!-- Replace with your file, e.g., images/fig1_background.jpg -->
-          <img src="pic/System diagram.png" alt="Figure 1 placeholder" />
-          <figcaption>Figure 1. Background and high-level workflow (replace with your Figure 1).</figcaption>
+          <img src="pic/System diagram.png" alt="Background and high-level workflow" />
+          <figcaption>Figure 1. Background and high-level workflow.</figcaption>
         </figure>
       </div>
     </section>
 
-    <!-- ================= Aims and Methodology ================= -->
     <section class="panel" style="margin-top:16px;">
       <div class="panel-head">
         <h2>Aims and Methodology</h2>
@@ -115,89 +115,52 @@
 
       <div class="prose">
         <p>
-          To address the above challenges, the project aims to improve the effectiveness of wind turbine blade inspections
-          by developing next-generation thermography reconstruction and inversion methods, leveraging complementary UK and
-          Brazilian expertise. The focus is on improving the reliability of thermal data acquisition on curved composite
-          surfaces, and enabling more interpretable, physics-consistent reconstruction for defect assessment
-          <sup>[3,4]</sup>.
+          To address the above challenges, the project aims to improve the effectiveness of wind turbine blade inspections by developing next-generation thermography reconstruction and inversion methods, leveraging complementary UK and Brazilian expertise. The focus is on improving the reliability of thermal data acquisition on curved composite surfaces, and enabling more interpretable, physics-consistent reconstruction for defect assessment <sup>[3,4]</sup>.
         </p>
 
         <p>
-          As illustrated in Figure 2, the methodology includes enhancing thermal excitation and measurement quality for
-          curved blades. This is achieved through advanced excitation strategies, such as coded/pulse-compression concepts
-          that improve signal-to-noise ratio and resolution, and coil/excitation configurations designed to better adapt
-          to curved geometries <sup>[5]</sup>. These developments target more uniform, repeatable heating and more informative
-          thermal responses for subsequent interpretation.
+          As illustrated in Figure 2, the methodology includes enhancing thermal excitation and measurement quality for curved blades. This is achieved through advanced excitation strategies, such as coded/pulse-compression concepts that improve signal-to-noise ratio and resolution, and coil/excitation configurations designed to better adapt to curved geometries <sup>[5]</sup>. These developments target more uniform, repeatable heating and more informative thermal responses for subsequent interpretation.
         </p>
 
-        <!-- IMAGE PLACEHOLDER: Figure 2 -->
         <figure class="figure">
-          <!-- Replace with your file, e.g., images/fig2_excitation.jpg -->
-          <img src="pic/Novel improvement.png" alt="Figure 2 placeholder" />
-          <figcaption>Figure 2. Excitation and data acquisition concept (replace with your Figure 2).</figcaption>
+          <img src="pic/Novel improvement.png" alt="Excitation and data acquisition concept" />
+          <figcaption>Figure 2. Excitation and data acquisition concept.</figcaption>
         </figure>
 
         <p>
-          Figure 3 summarises the reconstruction and inversion direction: the project advances thermography reconstruction
-          by combining physics-based understanding with modern learning-based tools, aiming for robust performance under
-          realistic heat-transfer conditions. In particular, wave-inspired thermal reconstruction concepts and physics-informed
-          learning (for example, incorporating physical loss and constraints during model training) are used to improve the
-          fidelity and interpretability of reconstructed results while remaining adaptable to different blade designs and
-          operating scenarios <sup>[6]</sup>.
+          Figure 3 summarises the reconstruction and inversion direction: the project advances thermography reconstruction by combining physics-based understanding with modern learning-based tools, aiming for robust performance under realistic heat-transfer conditions. In particular, wave-inspired thermal reconstruction concepts and physics-informed learning are used to improve the fidelity and interpretability of reconstructed results while remaining adaptable to different blade designs and operating scenarios <sup>[6]</sup>.
         </p>
 
-        <!-- IMAGE PLACEHOLDER: Figure 3 -->
         <figure class="figure">
-          <!-- Replace with your file, e.g., images/fig3_reconstruction.jpg -->
-          <img src="pic/Novel hybrid thermal reconstruction.png" alt="Figure 3 placeholder" />
-          <figcaption>Figure 3. Reconstruction and inversion pipeline (replace with your Figure 3).</figcaption>
+          <img src="pic/Novel hybrid thermal reconstruction.png" alt="Reconstruction and inversion pipeline" />
+          <figcaption>Figure 3. Reconstruction and inversion pipeline.</figcaption>
         </figure>
       </div>
     </section>
 
-    <!-- ================= ICA Enhancement Funding ================= -->
-    <section class="panel" id="ica-enhancement-funding" aria-labelledby="ica-enhancement-heading" style="margin-top:16px;">
-      <div class="panel-head">
-        <h2 id="ica-enhancement-heading">ICA Enhancement Funding</h2>
-      </div>
+    <!-- ================= Project 2 ================= -->
+    <h2 class="project-title">Cross Modality Validation and Virtual Aperture Focusing for Thermography VirtualWave Reconstruction on Curved Blade Geometries (ICA Enhancement Funding)</h2>
 
+    <section class="panel" style="margin-top:16px;">
       <div class="prose">
-        <h3 class="enhancement-title">Cross Modality Validation and Virtual Aperture Focusing for Thermography VirtualWave Reconstruction on Curved Blade Geometries (UK–Brazil)</h3>
-
         <p>
-          This enhancement project is designed to extend the existing ISPF UK–Brazil programme on thermographic
-          reconstruction for wind turbine blade inspection. It focuses on two complementary needs: independent
-          cross-modality validation and an industrial deployment and trial package in Brazil.
+          This enhancement project extends the existing ISPF UK–Brazil programme by adding two tightly scoped elements needed for translation: independent ground-truth validation and an industrial deployment and trial package in Brazil.
         </p>
 
         <p>
-          The planned Northumbria–Bristol work will organise reconstructed virtual thermal wavefields as a thermal
-          analogue of full matrix capture (FMC). A curvature-consistent analogue of the total focusing method (TFM)
-          will then provide virtual aperture focusing for defect localisation and quantification. Physics-attention
-          time-of-flight control will be used to stabilise focusing and suppress diffusion artefacts, with reproducible
-          benchmarking and structured reporting of robustness and uncertainty.
+          The planned Northumbria–Bristol work will reformulate reconstructed virtual thermal wavefields as a thermal analogue of full matrix capture (FMC), followed by curvature-consistent total focusing method (TFM)-analogue virtual aperture focusing for defect localisation and quantification. Physics-attention time-of-flight control will be used to stabilise focusing and suppress diffusion artefacts, with reproducible benchmarking and structured robustness and uncertainty reporting.
         </p>
 
         <p>
-          The University of Bristol will contribute independent ultrasound FMC measurements and TFM reconstructions
-          for selected representative cases. These will provide ground-truth benchmarks for evaluating
-          thermography-derived images on curved blade-like geometries. Prof. Paul Wilcox will provide senior academic
-          mentoring and methodological guidance on composite non-destructive testing, data-driven evaluation,
-          inverse problems, and validation protocol design.
+          The University of Bristol will contribute independent ultrasound FMC datasets and TFM reconstructions for selected representative cases, providing ground-truth benchmarks for thermography-derived images on curved blade-like geometries. Prof. Paul Wilcox will provide senior academic mentoring and methodological guidance on composite non-destructive testing, data-driven evaluation, inverse problems, and validation protocol design.
         </p>
 
         <p>
-          The planned activities also include UK–Brazil researcher exchanges and practical training across
-          Northumbria University, Newcastle University, and the University of Bristol. In Brazil, the Federal
-          University of Rio de Janeiro (UFRJ) and WEFA ENGENHARIA will support thermography deployment, field
-          calibration, and factory-based trials. Expected outputs include benchmark datasets, reproducible analysis
-          scripts, a validated virtual aperture focusing workflow, and an industry-usable inspection procedure and
-          trial report.
+          In Brazil, UFRJ and WEFA ENGENHARIA will support thermography deployment, field calibration, and factory-based trials. The planned outputs include cross-modality benchmark datasets, reproducible analysis scripts, a validated virtual aperture focusing workflow, and an industry-usable thermography inspection procedure and trial report.
         </p>
       </div>
     </section>
 
-    <!-- ================= References ================= -->
     <section class="panel" style="margin-top:16px;">
       <div class="panel-head">
         <h2>References</h2>
@@ -214,28 +177,12 @@
         </ol>
       </div>
     </section>
+  </main>
 
   <footer class="footer">
     <div class="container">
       © 2026 UK–Brazil Project · Northumbria University
     </div>
   </footer>
-
-  <!-- Page-specific styles -->
-  <style>
-    .prose { line-height: 1.65; color: #0f172a; }
-    .prose p { margin: 10px 0; color: #334155; }
-    #ica-enhancement-funding { scroll-margin-top: 160px; }
-    .enhancement-title { margin: 0 0 12px; font-size: 20px; line-height: 1.45; }
-    .figure { margin: 14px 0; border: 1px solid #e2e8f0; border-radius: 16px; overflow: hidden; background:#fff; }
-    .figure img { width: 100%; display: block; }
-    .figure figcaption { padding: 10px 12px; font-size: 12.5px; color: #475569; border-top: 1px solid #e2e8f0; }
-    .refs { margin-left: 18px; }
-    .refs li { margin: 8px 0; }
-    sup { font-size: 0.75em; }
-    a { text-decoration: underline; }
-    .role-list { margin: 10px 0 0 18px; color: #334155; line-height: 1.65; }
-    .role-list li { margin: 10px 0; }
-  </style>
 </body>
 </html>
